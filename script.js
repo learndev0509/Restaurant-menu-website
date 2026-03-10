@@ -46,33 +46,58 @@ document.addEventListener('DOMContentLoaded', function() {
     // Intersection Observer for active category highlighting
     const observerOptions = {
         root: null,
-        rootMargin: '-30% 0px -60% 0px',
+        rootMargin: '0px 0px -40% 0px',
         threshold: 0
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        // Skip if user clicked a tab (let the click handler manage active state)
-        if (isScrollingFromClick) {
-            return;
+    let pendingSectionId = null;
+    let observerDebounceTimer = null;
+    const DEBOUNCE_MS = 200;
+    const tabsContainer = document.querySelector('.category-tabs');
+
+    function scrollTabIntoView(tab) {
+        if (!tabsContainer || !tab) return;
+        const tabLeft = tab.offsetLeft;
+        const tabWidth = tab.offsetWidth;
+        const containerWidth = tabsContainer.offsetWidth;
+        const scrollLeft = tabLeft - (containerWidth / 2) + (tabWidth / 2);
+        tabsContainer.scrollTo({ left: Math.max(0, scrollLeft), behavior: 'smooth' });
+    }
+
+    function updateActiveTab(sectionId) {
+        let activeTab = null;
+        categoryTabs.forEach(tab => {
+            tab.classList.remove('active');
+            if (tab.getAttribute('href') === '#' + sectionId) {
+                tab.classList.add('active');
+                activeTab = tab;
+            }
+        });
+        if (activeTab) {
+            scrollTabIntoView(activeTab);
         }
+    }
+
+    const observer = new IntersectionObserver((entries) => {
+        if (isScrollingFromClick) return;
         
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const sectionId = entry.target.id;
+                pendingSectionId = entry.target.id;
                 
-                categoryTabs.forEach(tab => {
-                    tab.classList.remove('active');
-                    if (tab.getAttribute('href') === '#' + sectionId) {
-                        tab.classList.add('active');
+                if (observerDebounceTimer) clearTimeout(observerDebounceTimer);
+                observerDebounceTimer = setTimeout(() => {
+                    if (pendingSectionId) {
+                        updateActiveTab(pendingSectionId);
+                        pendingSectionId = null;
                     }
-                });
+                    observerDebounceTimer = null;
+                }, DEBOUNCE_MS);
             }
         });
     }, observerOptions);
 
-    menuSections.forEach(section => {
-        observer.observe(section);
-    });
+    menuSections.forEach(section => observer.observe(section));
 
     // Toggle ingredients panel (allows multiple panels open for comparison)
     ingredientsBtns.forEach(btn => {
