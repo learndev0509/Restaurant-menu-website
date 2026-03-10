@@ -31,6 +31,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: calc(var(--header-height) + var(--nav-height) + 16px);
+    -webkit-overflow-scrolling: touch;
 }
 
 body {
@@ -40,6 +41,8 @@ body {
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-overflow-scrolling: touch;
+    touch-action: manipulation;
 }
 
 img {
@@ -62,6 +65,9 @@ a {
     color: white;
     padding: 16px 20px;
     box-shadow: var(--shadow-md);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .header-content {
@@ -102,6 +108,9 @@ a {
     background-color: var(--card-bg);
     border-bottom: 1px solid var(--border-color);
     box-shadow: var(--shadow-sm);
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    backface-visibility: hidden;
 }
 
 .category-tabs {
