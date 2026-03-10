@@ -64,13 +64,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     tab.classList.remove('active');
                     if (tab.getAttribute('href') === '#' + sectionId) {
                         tab.classList.add('active');
-                        
-                        // Scroll tab into view within nav
-                        tab.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'nearest',
-                            inline: 'center'
-                        });
                     }
                 });
             }
