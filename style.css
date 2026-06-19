@@ -1180,12 +1180,20 @@ body::after {
     border: 1px solid #e3d9ce;
 }
 
-.ingredients-btn:hover,
 .ingredients-btn.active {
     background: linear-gradient(135deg, #8b5e3c, #6f462c);
     color: #ffffff;
     border-color: #6f462c;
     box-shadow: 0 7px 14px rgba(90, 55, 36, 0.26);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .ingredients-btn:not(.active):hover {
+        background: linear-gradient(135deg, #8b5e3c, #6f462c);
+        color: #ffffff;
+        border-color: #6f462c;
+        box-shadow: 0 7px 14px rgba(90, 55, 36, 0.26);
+    }
 }
 
 .card-media-back {
@@ -1205,4 +1213,29 @@ body::after {
 
 .menu-card.flipped .card-image::after {
     opacity: 0;
+}
+
+/* Final eye-button behavior:
+   default = creamy, open ingredients = brown */
+.menu-card .ingredients-btn {
+    background: #f4efe8;
+    color: #6f5a4a;
+    border: 1px solid #e3d9ce;
+    box-shadow: none;
+}
+
+.menu-card .ingredients-btn.active {
+    background: linear-gradient(135deg, #8b5e3c, #6f462c);
+    color: #ffffff;
+    border-color: #6f462c;
+    box-shadow: 0 7px 14px rgba(90, 55, 36, 0.26);
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .menu-card .ingredients-btn:not(.active):hover {
+        background: linear-gradient(135deg, #8b5e3c, #6f462c);
+        color: #ffffff;
+        border-color: #6f462c;
+        box-shadow: 0 7px 14px rgba(90, 55, 36, 0.26);
+    }
 }
