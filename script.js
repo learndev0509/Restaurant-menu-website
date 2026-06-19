@@ -1,18 +1,22 @@
 document.addEventListener('DOMContentLoaded', function() {
     const categoryTabs = document.querySelectorAll('.category-tab');
     const menuSections = document.querySelectorAll('.menu-section');
+    const menuCards = document.querySelectorAll('.menu-card');
     const ingredientsBtns = document.querySelectorAll('.ingredients-btn');
     const header = document.querySelector('.header');
+    const categoryNav = document.querySelector('.category-nav');
 
-    // Dynamically set header height CSS variable based on actual height
-    function updateHeaderHeight() {
+    // Keep fixed header/nav heights synced with CSS variables
+    function updateStickyHeights() {
         if (header) {
-            const actualHeight = header.offsetHeight;
-            document.documentElement.style.setProperty('--header-height', actualHeight + 'px');
+            document.documentElement.style.setProperty('--header-height', header.offsetHeight + 'px');
+        }
+        if (categoryNav) {
+            document.documentElement.style.setProperty('--nav-height', categoryNav.offsetHeight + 'px');
         }
     }
-    updateHeaderHeight();
-    window.addEventListener('resize', updateHeaderHeight);
+    updateStickyHeights();
+    window.addEventListener('resize', updateStickyHeights);
 
     // Track if user clicked a tab (to temporarily disable observer)
     let isScrollingFromClick = false;
@@ -28,8 +32,13 @@ document.addEventListener('DOMContentLoaded', function() {
             if (targetSection) {
                 isScrollingFromClick = true;
                 clearTimeout(scrollTimeout);
-                
-                targetSection.scrollIntoView({ behavior: 'smooth' });
+
+                const offset = (header ? header.offsetHeight : 0) + (categoryNav ? categoryNav.offsetHeight : 0) + 8;
+                const targetY = targetSection.getBoundingClientRect().top + window.pageYOffset - offset;
+                window.scrollTo({
+                    top: Math.max(0, targetY),
+                    behavior: 'smooth'
+                });
                 
                 // Update active tab immediately
                 categoryTabs.forEach(t => t.classList.remove('active'));
@@ -38,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 // Re-enable observer after scroll completes
                 scrollTimeout = setTimeout(() => {
                     isScrollingFromClick = false;
-                }, 1000);
+                }, 900);
             }
         });
     });
@@ -99,17 +108,61 @@ document.addEventListener('DOMContentLoaded', function() {
 
     menuSections.forEach(section => observer.observe(section));
 
-    // Toggle ingredients panel (allows multiple panels open for comparison)
+    // Reveal animation for menu cards
+    menuCards.forEach((card, index) => {
+        card.classList.add('reveal-ready');
+        card.style.setProperty('--stagger-index', (index % 4).toString());
+
+        // Build flip UI: image on front, ingredients on back
+        const imageContainer = card.querySelector('.card-image');
+        const ingredientsPanel = card.querySelector('.ingredients-panel');
+        if (!imageContainer || !ingredientsPanel) return;
+
+        const flip = document.createElement('div');
+        flip.className = 'card-media-flip';
+
+        const front = document.createElement('div');
+        front.className = 'card-media-face card-media-front';
+        while (imageContainer.firstChild) {
+            front.appendChild(imageContainer.firstChild);
+        }
+
+        const back = document.createElement('div');
+        back.className = 'card-media-face card-media-back';
+        back.innerHTML = ingredientsPanel.innerHTML;
+
+        flip.appendChild(front);
+        flip.appendChild(back);
+        imageContainer.appendChild(flip);
+        card.classList.add('flip-mode');
+    });
+
+    const cardObserver = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-visible');
+                obs.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px 0px -8% 0px',
+        threshold: 0.12
+    });
+
+    menuCards.forEach(card => cardObserver.observe(card));
+
+    // Flip card image area to ingredients and back
     ingredientsBtns.forEach(btn => {
         btn.addEventListener('click', function(e) {
             e.stopPropagation();
             
             const card = this.closest('.menu-card');
-            const panel = card.querySelector('.ingredients-panel');
-            
-            // Toggle current panel (no longer closes other panels)
-            panel.classList.toggle('show');
+            if (!card) return;
+
+            const isFlipped = card.classList.toggle('flipped');
             this.classList.toggle('active');
+            this.setAttribute('aria-pressed', isFlipped ? 'true' : 'false');
         });
     });
 });
