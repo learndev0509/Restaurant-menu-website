@@ -1239,3 +1239,342 @@ body::after {
         box-shadow: 0 7px 14px rgba(90, 55, 36, 0.26);
     }
 }
+
+/* Portion and serving info */
+.portion-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 0 0 10px;
+}
+
+.portion-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 11px;
+    border-radius: 999px;
+    font-size: 0.69rem;
+    font-weight: 600;
+    color: #6a4a35;
+    background: linear-gradient(145deg, #fbf3e8, #f3e3d4);
+    border: 1px solid #e1ccb7;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.62), 0 4px 10px rgba(111, 70, 44, 0.08);
+    letter-spacing: 0.15px;
+    line-height: 1.2;
+}
+
+.portion-icon {
+    width: 15px;
+    height: 15px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: #8b5e3c;
+    flex-shrink: 0;
+}
+
+.portion-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+/* ===== Feature upgrades ===== */
+
+/* Search */
+.search-toggle-btn {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border: 1px solid #e3d9ce;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #fbf3e8, #f3e3d4);
+    color: #6f462c;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.search-toggle-btn:hover {
+    background: linear-gradient(135deg, #8b5e3c, #6f462c);
+    color: #fff;
+    box-shadow: 0 6px 14px rgba(90, 55, 36, 0.24);
+}
+
+.search-bar-wrap {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.35s ease, opacity 0.3s ease, padding 0.35s ease;
+    padding: 0 16px;
+}
+
+.search-bar-wrap.is-open {
+    max-height: 64px;
+    opacity: 1;
+    padding: 0 16px 12px;
+}
+
+.search-bar-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1px solid #e3d9ce;
+    border-radius: 999px;
+    padding: 6px 6px 6px 16px;
+    box-shadow: 0 4px 12px rgba(90, 55, 36, 0.1);
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: #4f3325;
+    outline: none;
+    min-width: 0;
+}
+
+.search-input::placeholder {
+    color: #a08b7a;
+}
+
+.search-close-btn {
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: 50%;
+    background: #f4efe8;
+    color: #6f462c;
+    font-size: 1.25rem;
+    line-height: 1;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.search-close-btn:hover {
+    background: #e8ddd0;
+}
+
+/* Category nav + diet filter */
+.category-nav-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+}
+
+.category-nav-inner .category-tabs {
+    flex: 1;
+    min-width: 0;
+    padding: 0;
+    margin: 0;
+    max-width: none;
+}
+
+.diet-filter {
+    display: flex;
+    flex-shrink: 0;
+    background: #ebe7e0;
+    border: 1px solid #ddd6cc;
+    border-radius: 999px;
+    padding: 3px;
+    gap: 2px;
+}
+
+.diet-filter-btn {
+    border: none;
+    background: transparent;
+    color: #5d5348;
+    font-family: inherit;
+    font-size: 0.68rem;
+    font-weight: 600;
+    padding: 6px 10px;
+    border-radius: 999px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s ease, color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.diet-filter-btn.active {
+    background: linear-gradient(135deg, #8b5e3c, #6f462c);
+    color: #fff;
+    box-shadow: 0 4px 10px rgba(90, 55, 36, 0.22);
+}
+
+/* Card badges */
+.card-image {
+    position: relative;
+}
+
+.card-badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    z-index: 5;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-size: 0.62rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    text-transform: uppercase;
+    color: #fff;
+    background: linear-gradient(135deg, #8b5e3c, #6f462c);
+    box-shadow: 0 4px 10px rgba(90, 55, 36, 0.35);
+    pointer-events: none;
+}
+
+.card-badge.badge-popular {
+    background: linear-gradient(135deg, #a0714a, #8b5e3c);
+}
+
+/* Skeleton loader */
+.card-skeleton {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(90deg, #f0e6da 0%, #faf4ec 50%, #f0e6da 100%);
+    background-size: 200% 100%;
+    animation: skeletonPulse 1.4s ease-in-out infinite;
+}
+
+.card-media-front img {
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.card-media-front img.is-loaded {
+    opacity: 1;
+}
+
+.card-image.is-loaded .card-skeleton {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.35s ease;
+}
+
+@keyframes skeletonPulse {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Filter hidden state */
+.menu-card.filter-hidden {
+    display: none;
+}
+
+.menu-section.section-empty {
+    display: none;
+}
+
+.no-results-banner {
+    text-align: center;
+    padding: 32px 16px;
+    margin-bottom: 16px;
+    color: #8a6b56;
+    font-size: 0.92rem;
+    font-weight: 500;
+    background: linear-gradient(160deg, #f4f1ec, #efebe5);
+    border: 1px solid #e1d9cf;
+    border-radius: 16px;
+}
+
+.no-results-banner[hidden] {
+    display: none;
+}
+
+/* Back to top */
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    z-index: 90;
+    width: 46px;
+    height: 46px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #8b5e3c, #6f462c);
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 20px rgba(90, 55, 36, 0.35);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    box-shadow: 0 10px 24px rgba(90, 55, 36, 0.45);
+}
+
+@media (max-width: 575px) {
+    .search-bar-wrap {
+        padding: 0 10px;
+    }
+
+    .search-bar-wrap.is-open {
+        max-height: 74px;
+        padding: 8px 10px 8px;
+    }
+
+    .search-bar-inner {
+        padding: 5px 5px 5px 12px;
+        gap: 6px;
+    }
+
+    .search-input {
+        font-size: 0.86rem;
+    }
+
+    .search-close-btn {
+        width: 30px;
+        height: 30px;
+        font-size: 1.1rem;
+    }
+
+    .category-nav-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 8px;
+    }
+
+    .diet-filter {
+        align-self: center;
+    }
+
+    .diet-filter-btn {
+        font-size: 0.72rem;
+        padding: 7px 12px;
+    }
+
+    .back-to-top {
+        right: 14px;
+        bottom: 18px;
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .card-skeleton {
+        animation: none;
+    }
+}
