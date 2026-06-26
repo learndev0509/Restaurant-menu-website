@@ -341,9 +341,6 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0
     };
 
-    let pendingSectionId = null;
-    let observerDebounceTimer = null;
-    const DEBOUNCE_MS = 200;
     const tabsContainer = document.querySelector('.category-tabs');
 
     function scrollTabIntoView(tab) {
@@ -367,25 +364,51 @@ document.addEventListener('DOMContentLoaded', function() {
         if (activeTab) scrollTabIntoView(activeTab);
     }
 
-    const observer = new IntersectionObserver((entries) => {
-        if (isScrollingFromClick) return;
+    // Pick the section currently sitting under the sticky nav. Works for
+    // BOTH scroll directions because it re-evaluates on every frame instead
+    // of relying on one-shot "isIntersecting=true" transitions (which can be
+    // missed when scrolling up or jumping).
+    function pickActiveSectionId() {
+        const navHeight = (header ? header.offsetHeight : 0) + (categoryNav ? categoryNav.offsetHeight : 0);
+        const probeY = navHeight + 8;
+        let activeId = null;
+        let fallbackId = null;
 
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                pendingSectionId = entry.target.id;
-                if (observerDebounceTimer) clearTimeout(observerDebounceTimer);
-                observerDebounceTimer = setTimeout(() => {
-                    if (pendingSectionId) {
-                        updateActiveTab(pendingSectionId);
-                        pendingSectionId = null;
-                    }
-                    observerDebounceTimer = null;
-                }, DEBOUNCE_MS);
+        menuSections.forEach(sec => {
+            const rect = sec.getBoundingClientRect();
+            // Primary: this section straddles the probe line right below the nav.
+            if (rect.top <= probeY && rect.bottom > probeY) {
+                activeId = sec.id;
+            }
+            // Fallback: first section whose top is still below the nav
+            // (used at the very top of the page before any section is "under" the nav).
+            if (!fallbackId && rect.top > navHeight && rect.top < window.innerHeight) {
+                fallbackId = sec.id;
             }
         });
-    }, observerOptions);
+        return activeId || fallbackId;
+    }
 
-    menuSections.forEach(section => observer.observe(section));
+    let scrollRaf = null;
+    function onScrollForTabs() {
+        if (isScrollingFromClick) return;
+        if (scrollRaf !== null) return;
+        scrollRaf = requestAnimationFrame(() => {
+            scrollRaf = null;
+            const id = pickActiveSectionId();
+            if (id) {
+                const currentActive = document.querySelector('.category-tab.active');
+                if (!currentActive || currentActive.getAttribute('href') !== '#' + id) {
+                    updateActiveTab(id);
+                }
+            }
+        });
+    }
+
+    window.addEventListener('scroll', onScrollForTabs, { passive: true });
+    window.addEventListener('resize', onScrollForTabs);
+    // Set the right tab on initial load (e.g. if the page is opened scrolled or with a hash).
+    onScrollForTabs();
 
     const cardObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -434,11 +457,14 @@ document.querySelectorAll('.menu-card').forEach(card=>{
   const toggle = document.getElementById('themeToggle');
   const STORAGE_KEY = 'whiteroot-theme';
 
+  const SUN_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>';
+  const MOON_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
+
   function apply(theme){
     const dark = theme === 'dark';
     document.body.classList.toggle('dark-mode', dark);
     if (toggle){
-      toggle.textContent = dark ? '☀️' : '🌙';
+      toggle.innerHTML = dark ? SUN_SVG : MOON_SVG;
       toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
     }
   }

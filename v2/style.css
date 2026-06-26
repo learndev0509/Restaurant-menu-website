@@ -1640,10 +1640,11 @@ body::after {
     flex-shrink:0;
     width:40px;
     height:40px;
-    border:1px solid #e3d9ce;
+    border:1px solid transparent;
     border-radius:50%;
-    background:linear-gradient(145deg,#fbf3e8,#f3e3d4);
-    color:#6f462c;
+    /* Brownie by default in light mode (matches the brand accent) */
+    background:linear-gradient(135deg,#8b5e3c,#6f462c);
+    color:#fff;
     cursor:pointer;
     display:flex;
     align-items:center;
@@ -1651,11 +1652,12 @@ body::after {
     transition:background .2s ease,box-shadow .2s ease,transform .2s ease;
     font-size:18px;
     margin-right:10px;
+    box-shadow:0 4px 12px rgba(111,70,44,.22);
 }
 .theme-toggle-header:hover{
  background:linear-gradient(135deg,#8b5e3c,#6f462c);
  color:#fff;
- box-shadow:0 8px 18px rgba(111,70,44,.25);
+ box-shadow:0 8px 18px rgba(111,70,44,.35);
  transform:translateY(-2px);
 }
 .dark-toggle{display:none!important;}
@@ -1718,7 +1720,24 @@ body::after {
     background:#262626;border-color:#3a3a3a;color:#f3e3d4;
 }
 .dark-mode .search-bar-wrap{background:#1a1a1a}
-.dark-mode .search-input{background:#262626;color:#eee;border-color:#3a3a3a}
+/* Make the whole search pill look unified and dark — not a dark input
+   stamped onto a light pill. */
+.dark-mode .search-bar-inner{
+    background:#1d1d1d;
+    border-color:#2e2e2e;
+    box-shadow:0 4px 12px rgba(0,0,0,.35);
+}
+.dark-mode .search-input{
+    background:transparent;
+    color:#f3e3d4;
+    border-color:transparent;
+}
+.dark-mode .search-input::placeholder{color:#8a7a6c}
+.dark-mode .search-close-btn{
+    background:#2a2a2a;
+    color:#f3e3d4;
+}
+.dark-mode .search-close-btn:hover{background:#3a3a3a}
 
 /* Category nav + tabs + diet filter */
 .dark-mode .category-nav{background:#1a1a1a;border-bottom-color:#333}
