@@ -1280,40 +1280,6 @@ body::after {
     height: 100%;
 }
 
-/* ===== Mobile only: move qty/serves pills next to the price,
-   instead of their own row above the footer ===== */
-@media (max-width: 575px) {
-    .card-content {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-    }
-
-    .card-header { order: 0; flex: 1 1 100%; }
-    .dish-description { order: 1; flex: 1 1 100%; }
-    .ingredients-panel { order: 2; flex: 1 1 100%; }
-
-    /* Unwrap the footer box so price/spicy-indicator become direct
-       flex children of .card-content, sitting on the same row as
-       the portion pills below. */
-    .card-footer {
-        display: contents;
-    }
-
-    .price { order: 3; }
-
-    .portion-meta {
-        order: 4;
-        margin: 0 0 0 10px;
-        flex: 0 1 auto;
-    }
-
-    .spicy-indicator {
-        order: 5;
-        margin-left: auto;
-    }
-}
-
 /* ===== Feature upgrades ===== */
 
 /* Search */
@@ -1404,16 +1370,13 @@ body::after {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 4px 12px;
+    padding: 10px 12px;
 }
 
 .category-nav-inner .category-tabs {
     flex: 1;
     min-width: 0;
-    /* Vertical padding here is INSIDE the scroll container's clip box, so the
-       hover lift (transform: translateY(-1px)) and focus ring stay visible
-       instead of being clipped by the overflow-x:auto scrollport. */
-    padding: 6px 0;
+    padding: 0;
     margin: 0;
     max-width: none;
 }
@@ -1468,15 +1431,6 @@ body::after {
     background: linear-gradient(135deg, #8b5e3c, #6f462c);
     box-shadow: 0 4px 10px rgba(90, 55, 36, 0.35);
     pointer-events: none;
-    opacity: 1;
-    transition: opacity 0.25s ease;
-}
-
-/* Fix: badge sits in .card-image itself (above both flip faces), so it
-   used to stay visible and overlap the "Ingredients" heading on the back
-   face. Hide it once the card is flipped. */
-.menu-card.flipped .card-badge {
-    opacity: 0;
 }
 
 .card-badge.badge-popular {
@@ -1624,149 +1578,3 @@ body::after {
         animation: none;
     }
 }
-
-.hero-banner{height:320px;background-color:#6f462c;background-image:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200');background-position:center;background-size:cover;display:flex;align-items:center;justify-content:center;color:#fff;text-align:center}
-.hero-overlay{background:rgba(0,0,0,.45);padding:30px;border-radius:12px}
-.info-card{display:flex;gap:20px;justify-content:center;padding:15px;flex-wrap:wrap;background:#fff}
-.floating-whatsapp,.floating-maps,.dark-toggle{position:fixed;right:20px;z-index:9999;padding:10px 14px;border-radius:30px;text-decoration:none}
-.floating-whatsapp{bottom:90px;background:#25D366;color:#fff}
-.floating-maps{bottom:140px;background:#333;color:#fff}
-.dark-toggle{bottom:190px}
-.dark-mode{background:#121212;color:#eee}
-.dark-mode .menu-card,.dark-mode .info-card{background:#1e1e1e;color:#eee}
-
-
-.theme-toggle-header{
-    flex-shrink:0;
-    width:40px;
-    height:40px;
-    border:1px solid transparent;
-    border-radius:50%;
-    /* Brownie by default in light mode (matches the brand accent) */
-    background:linear-gradient(135deg,#8b5e3c,#6f462c);
-    color:#fff;
-    cursor:pointer;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    transition:background .2s ease,box-shadow .2s ease,transform .2s ease;
-    font-size:18px;
-    margin-right:10px;
-    box-shadow:0 4px 12px rgba(111,70,44,.22);
-}
-.theme-toggle-header:hover{
- background:linear-gradient(135deg,#8b5e3c,#6f462c);
- color:#fff;
- box-shadow:0 8px 18px rgba(111,70,44,.35);
- transform:translateY(-2px);
-}
-.dark-toggle{display:none!important;}
-
-/* ---------- Hero "View Menu" button (was unstyled) ---------- */
-.hero-btn{
-    margin-top:18px;
-    padding:12px 30px;
-    font-family:inherit;
-    font-size:16px;
-    font-weight:600;
-    color:#6f462c;
-    background:#fff;
-    border:none;
-    border-radius:30px;
-    cursor:pointer;
-    box-shadow:0 6px 18px rgba(0,0,0,.25);
-    transition:transform .2s ease,box-shadow .2s ease,background .2s ease,color .2s ease;
-}
-.hero-btn:hover{
-    background:linear-gradient(135deg,#8b5e3c,#6f462c);
-    color:#fff;
-    transform:translateY(-2px);
-    box-shadow:0 10px 24px rgba(0,0,0,.3);
-}
-
-/* ---------- Accessibility: screen-reader-only text ---------- */
-.sr-only{
-    position:absolute;
-    width:1px;height:1px;
-    padding:0;margin:-1px;
-    overflow:hidden;
-    clip:rect(0,0,0,0);
-    white-space:nowrap;border:0;
-}
-
-/* ---------- Price / disclaimer note ---------- */
-.price-note{
-    max-width:1200px;
-    margin:4px auto 28px;
-    padding:0 20px;
-    text-align:center;
-    font-size:13px;
-    color:#8a7a6c;
-}
-
-/* ============================================================
-   DARK MODE (completed — previously only body + cards)
-   ============================================================ */
-.dark-mode{background:#121212;color:#eee}
-.dark-mode .menu-card,
-.dark-mode .info-card{background:#1e1e1e;color:#eee}
-
-/* Header + brand */
-.dark-mode .header{background:#1a1a1a;border-bottom-color:#333}
-.dark-mode .restaurant-name{color:#f3e3d4}
-.dark-mode .tagline{color:#b9a894}
-.dark-mode .search-toggle-btn,
-.dark-mode .theme-toggle-header{
-    background:#262626;border-color:#3a3a3a;color:#f3e3d4;
-}
-.dark-mode .search-bar-wrap{background:#1a1a1a}
-/* Make the whole search pill look unified and dark — not a dark input
-   stamped onto a light pill. */
-.dark-mode .search-bar-inner{
-    background:#1d1d1d;
-    border-color:#2e2e2e;
-    box-shadow:0 4px 12px rgba(0,0,0,.35);
-}
-.dark-mode .search-input{
-    background:transparent;
-    color:#f3e3d4;
-    border-color:transparent;
-}
-.dark-mode .search-input::placeholder{color:#8a7a6c}
-.dark-mode .search-close-btn{
-    background:#2a2a2a;
-    color:#f3e3d4;
-}
-.dark-mode .search-close-btn:hover{background:#3a3a3a}
-
-/* Category nav + tabs + diet filter */
-.dark-mode .category-nav{background:#1a1a1a;border-bottom-color:#333}
-.dark-mode .category-tab{background:#262626;color:#ddd;border-color:#3a3a3a}
-.dark-mode .category-tab.active{background:linear-gradient(135deg,#8b5e3c,#6f462c);color:#fff;border-color:transparent}
-/* Fix: hover used to inherit the light-mode hover background (near-white),
-   which made the tab's border blend in and disappear. */
-.dark-mode .category-tab:hover:not(.active){
-    background-color:#332e29;
-    color:#fff;
-    border-color:#8b5e3c;
-    box-shadow:none;
-}
-.dark-mode .diet-filter{background:#262626}
-.dark-mode .diet-filter-btn{color:#ddd}
-.dark-mode .diet-filter-btn.active{background:#6f462c;color:#fff}
-
-/* Section titles + cards */
-.dark-mode .section-title{color:#f3e3d4}
-.dark-mode .dish-name{color:#fff}
-.dark-mode .dish-description{color:#b9a894}
-.dark-mode .menu-section{background:#181818}
-.dark-mode .portion-pill{background:#262626;color:#e8d8c6}
-.dark-mode .ingredients-btn{background:#262626;color:#f3e3d4}
-.dark-mode .card-media-back{background:#1e1e1e;color:#eee}
-.dark-mode .card-media-back h4{color:#f3e3d4}
-
-/* Notes, footer, misc */
-.dark-mode .price-note{color:#9c8c7c}
-.dark-mode .footer{background:#1a1a1a}
-.dark-mode .no-results-banner{background:#262626;color:#eee}
-.dark-mode .back-to-top{background:#6f462c;color:#fff}

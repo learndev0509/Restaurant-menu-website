@@ -26,13 +26,7 @@ document.addEventListener('DOMContentLoaded', function() {
             'drinks': { quantity: '350 ml', serves: 'Serves 1' },
             'desserts': { quantity: '300 g', serves: 'Serves 2' }
         };
-        const base = sectionMap[sectionId] || defaults;
-        // Per-dish override: add data-quantity="..." and/or data-serves="..."
-        // to any <article class="menu-card"> to show real values for that dish.
-        return {
-            quantity: card.dataset.quantity || base.quantity,
-            serves: card.dataset.serves || base.serves
-        };
+        return sectionMap[sectionId] || defaults;
     }
 
     function updateStickyHeights() {
@@ -75,48 +69,24 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 
-    // --- Badges ---
-    // Curate per dish with data-badge="Chef's Special" (or any text) on a card,
-    // or data-no-badge to suppress. If nothing is set, fall back to the old
-    // positional default: 1st card = Chef's Special, 2nd = Popular.
-    function makeBadge(card, text, className) {
-        const imageContainer = card.querySelector('.card-image');
-        if (!imageContainer) return;
-        const badge = document.createElement('span');
-        badge.className = `card-badge ${className}`;
-        badge.textContent = text;
-        imageContainer.appendChild(badge);
-    }
-
-    function badgeClassFor(text) {
-        const t = text.toLowerCase();
-        if (t.includes('chef')) return 'badge-chefs';
-        if (t.includes('popular')) return 'badge-popular';
-        return 'badge-popular';
-    }
-
+    // --- Badges: first card = Chef's Special, second = Popular ---
     menuSections.forEach(section => {
-        const cards = [...section.querySelectorAll('.menu-card')];
-
-        // 1) Explicit per-dish badges
-        cards.forEach(card => {
-            if (card.dataset.badge) {
-                makeBadge(card, card.dataset.badge, badgeClassFor(card.dataset.badge));
-                card.dataset.badged = 'true';
-            }
-        });
-
-        // 2) Positional defaults for cards that weren't explicitly set/suppressed
-        const positional = [
+        const cards = section.querySelectorAll('.menu-card');
+        const badgeConfig = [
             { index: 0, text: "Chef's Special", className: 'badge-chefs' },
             { index: 1, text: 'Popular', className: 'badge-popular' }
         ];
-        positional.forEach(({ index, text, className }) => {
+
+        badgeConfig.forEach(({ index, text, className }) => {
             const card = cards[index];
             if (!card) return;
-            if (card.dataset.badged === 'true') return;       // already has an explicit badge
-            if (card.dataset.noBadge !== undefined) return;   // suppressed
-            makeBadge(card, text, className);
+            const imageContainer = card.querySelector('.card-image');
+            if (!imageContainer) return;
+
+            const badge = document.createElement('span');
+            badge.className = `card-badge ${className}`;
+            badge.textContent = text;
+            imageContainer.appendChild(badge);
         });
     });
 
@@ -128,14 +98,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const foodType = card.querySelector('.food-type');
         if (foodType?.classList.contains('veg')) {
             card.dataset.foodType = 'veg';
-            foodType.setAttribute('role', 'img');
-            foodType.setAttribute('aria-label', 'Vegetarian');
-            foodType.setAttribute('title', 'Vegetarian');
         } else if (foodType?.classList.contains('non-veg')) {
             card.dataset.foodType = 'non-veg';
-            foodType.setAttribute('role', 'img');
-            foodType.setAttribute('aria-label', 'Non-vegetarian');
-            foodType.setAttribute('title', 'Non-vegetarian');
         }
 
         const description = card.querySelector('.dish-description');
@@ -206,10 +170,10 @@ document.addEventListener('DOMContentLoaded', function() {
         const query = (searchInput?.value || '').toLowerCase().trim();
 
         menuCards.forEach(card => {
-            const searchText = card.dataset.search || (card.querySelector('.dish-name')?.textContent || '').toLowerCase();
+            const name = (card.querySelector('.dish-name')?.textContent || '').toLowerCase();
             const foodType = card.dataset.foodType || '';
 
-            const matchesSearch = !query || searchText.includes(query);
+            const matchesSearch = !query || name.includes(query);
             let matchesDiet = true;
             if (currentDietFilter === 'veg') matchesDiet = foodType === 'veg';
             if (currentDietFilter === 'non-veg') matchesDiet = foodType === 'non-veg';
@@ -341,6 +305,9 @@ document.addEventListener('DOMContentLoaded', function() {
         threshold: 0
     };
 
+    let pendingSectionId = null;
+    let observerDebounceTimer = null;
+    const DEBOUNCE_MS = 200;
     const tabsContainer = document.querySelector('.category-tabs');
 
     function scrollTabIntoView(tab) {
@@ -364,51 +331,25 @@ document.addEventListener('DOMContentLoaded', function() {
         if (activeTab) scrollTabIntoView(activeTab);
     }
 
-    // Pick the section currently sitting under the sticky nav. Works for
-    // BOTH scroll directions because it re-evaluates on every frame instead
-    // of relying on one-shot "isIntersecting=true" transitions (which can be
-    // missed when scrolling up or jumping).
-    function pickActiveSectionId() {
-        const navHeight = (header ? header.offsetHeight : 0) + (categoryNav ? categoryNav.offsetHeight : 0);
-        const probeY = navHeight + 8;
-        let activeId = null;
-        let fallbackId = null;
-
-        menuSections.forEach(sec => {
-            const rect = sec.getBoundingClientRect();
-            // Primary: this section straddles the probe line right below the nav.
-            if (rect.top <= probeY && rect.bottom > probeY) {
-                activeId = sec.id;
-            }
-            // Fallback: first section whose top is still below the nav
-            // (used at the very top of the page before any section is "under" the nav).
-            if (!fallbackId && rect.top > navHeight && rect.top < window.innerHeight) {
-                fallbackId = sec.id;
-            }
-        });
-        return activeId || fallbackId;
-    }
-
-    let scrollRaf = null;
-    function onScrollForTabs() {
+    const observer = new IntersectionObserver((entries) => {
         if (isScrollingFromClick) return;
-        if (scrollRaf !== null) return;
-        scrollRaf = requestAnimationFrame(() => {
-            scrollRaf = null;
-            const id = pickActiveSectionId();
-            if (id) {
-                const currentActive = document.querySelector('.category-tab.active');
-                if (!currentActive || currentActive.getAttribute('href') !== '#' + id) {
-                    updateActiveTab(id);
-                }
+
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                pendingSectionId = entry.target.id;
+                if (observerDebounceTimer) clearTimeout(observerDebounceTimer);
+                observerDebounceTimer = setTimeout(() => {
+                    if (pendingSectionId) {
+                        updateActiveTab(pendingSectionId);
+                        pendingSectionId = null;
+                    }
+                    observerDebounceTimer = null;
+                }, DEBOUNCE_MS);
             }
         });
-    }
+    }, observerOptions);
 
-    window.addEventListener('scroll', onScrollForTabs, { passive: true });
-    window.addEventListener('resize', onScrollForTabs);
-    // Set the right tab on initial load (e.g. if the page is opened scrolled or with a hash).
-    onScrollForTabs();
+    menuSections.forEach(section => observer.observe(section));
 
     const cardObserver = new IntersectionObserver((entries, obs) => {
         entries.forEach(entry => {
@@ -437,45 +378,3 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
-
-// Reliable inline fallback image (no external dependency on via.placeholder.com)
-const FALLBACK_IMG = 'data:image/svg+xml;utf8,' + encodeURIComponent(
-  '<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300"><rect width="400" height="300" fill="#efe6da"/><text x="50%" y="50%" font-family="Poppins,Arial,sans-serif" font-size="22" fill="#9c8c7c" text-anchor="middle" dominant-baseline="middle">The White Root</text></svg>'
-);
-document.querySelectorAll('img').forEach(img=>{
-  img.loading='lazy';
-  img.onerror=()=>{ img.onerror=null; img.src=FALLBACK_IMG; };
-});
-document.querySelectorAll('.menu-card').forEach(card=>{
- const n=card.querySelector('.dish-name')?.textContent||'';
- const d=card.textContent||'';
- card.dataset.search=(n+' '+d).toLowerCase();
-});
-
-// --- Dark mode toggle with persistence across visits ---
-(function(){
-  const toggle = document.getElementById('themeToggle');
-  const STORAGE_KEY = 'whiteroot-theme';
-
-  const SUN_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>';
-  const MOON_SVG = '<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>';
-
-  function apply(theme){
-    const dark = theme === 'dark';
-    document.body.classList.toggle('dark-mode', dark);
-    if (toggle){
-      toggle.innerHTML = dark ? SUN_SVG : MOON_SVG;
-      toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-    }
-  }
-
-  let saved = null;
-  try { saved = localStorage.getItem(STORAGE_KEY); } catch(e){}
-  apply(saved === 'dark' ? 'dark' : 'light');
-
-  toggle?.addEventListener('click', () => {
-    const nowDark = !document.body.classList.contains('dark-mode');
-    apply(nowDark ? 'dark' : 'light');
-    try { localStorage.setItem(STORAGE_KEY, nowDark ? 'dark' : 'light'); } catch(e){}
-  });
-})();
