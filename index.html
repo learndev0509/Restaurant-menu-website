@@ -1,1210 +1,495 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The white root - Digital Menu</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css?v=20260623-1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plate &amp; Pixel — Smart Digital QR Menus for Restaurants</title>
+<meta name="description" content="Premium digital QR menus for restaurants and cafes. Modern design, instant updates, lifetime ownership.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=1">
 </head>
 <body>
-    <!-- Header -->
-    <header class="header">
-        <div class="header-content">
-            <div class="logo">🍽️</div>
-            <div class="brand">
-                <h1 class="restaurant-name">The White Root Cafe & Restaurant</h1>
-                <p class="tagline">Authentic Flavors, Modern Experience</p>
-            </div>
-            <button type="button" class="search-toggle-btn" aria-label="Search menu" aria-expanded="false">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                    <circle cx="11" cy="11" r="8"></circle>
-                    <path d="m21 21-4.35-4.35"></path>
-                </svg>
-            </button>
-        </div>
-        <div class="search-bar-wrap" aria-hidden="true">
-            <div class="search-bar-inner">
-                <input type="search" class="search-input" placeholder="Search dishes..." aria-label="Search dishes" autocomplete="off">
-                <button type="button" class="search-close-btn" aria-label="Close search">&times;</button>
-            </div>
-        </div>
-    </header>
 
-    <!-- Category Navigation -->
-    <nav class="category-nav">
-        <div class="category-nav-inner">
-            <div class="category-tabs">
-                <a href="#starters" class="category-tab active">Starters</a>
-                <a href="#main-course" class="category-tab">Main Course</a>
-                <a href="#pizza" class="category-tab">Pizza</a>
-                <a href="#burgers" class="category-tab">Burgers</a>
-                <a href="#pasta" class="category-tab">Pasta</a>
-                <a href="#drinks" class="category-tab">Drinks</a>
-                <a href="#desserts" class="category-tab">Desserts</a>
-            </div>
-            <div class="diet-filter" role="group" aria-label="Filter by diet">
-                <button type="button" class="diet-filter-btn active" data-filter="all">All</button>
-                <button type="button" class="diet-filter-btn" data-filter="veg">Veg</button>
-                <button type="button" class="diet-filter-btn" data-filter="non-veg">Non-Veg</button>
-            </div>
-        </div>
+<!-- ============ HEADER / NAVIGATION ============ -->
+<header class="site-header">
+  <!-- MOBILE NAV TOGGLE (CSS-only, no JS) — must be a sibling of .mobile-menu for the ~ selector to work -->
+  <input type="checkbox" id="nav-toggle" class="nav-toggle-checkbox">
+
+  <div class="container nav-inner">
+    <a href="#" class="brand">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="7" fill="url(#bg)"/><path d="M9 14h10M9 10h6M9 18h7" stroke="white" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="bg" x1="0" y1="0" x2="28" y2="28"><stop offset="0" stop-color="#FF6B00"/><stop offset="1" stop-color="#FF3D3D"/></linearGradient></defs></svg>
+      </span>
+      <span class="brand-name">Plate<span class="brand-dot">&amp;</span>Pixel</span>
+    </a>
+
+    <nav class="main-nav">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#process">Process</a>
+      <a href="#contact">Contact</a>
     </nav>
 
-    <!-- Menu Sections -->
-    <main class="menu-container">
-        
-        <!-- Starters Section -->
-        <section id="starters" class="menu-section">
-            <h2 class="section-title">Starters</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop" alt="Paneer Tikka" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Paneer Tikka</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Grilled cottage cheese cubes marinated in Indian spices and yogurt</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Paneer (Cottage Cheese)</li>
-                                <li>Yogurt</li>
-                                <li>Bell Peppers</li>
-                                <li>Onions</li>
-                                <li>Ginger-Garlic Paste</li>
-                                <li>Red Chili Powder</li>
-                                <li>Turmeric</li>
-                                <li>Garam Masala</li>
-                                <li>Lemon Juice</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹220</span>
-                        </div>
-                    </div>
-                </article>
+    <div class="nav-actions">
+      <a href="#pricing" class="btn btn-primary btn-sm">Get Started</a>
+      <label for="nav-toggle" class="hamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </label>
+    </div>
+  </div>
 
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&h=300&fit=crop" alt="Chicken Wings" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chicken Wings</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Crispy fried wings tossed in spicy buffalo sauce</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Chicken Wings</li>
-                                <li>All-Purpose Flour</li>
-                                <li>Buffalo Hot Sauce</li>
-                                <li>Butter</li>
-                                <li>Garlic Powder</li>
-                                <li>Paprika</li>
-                                <li>Salt & Pepper</li>
-                                <li>Vegetable Oil</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹280</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
+  <!-- mobile overlay menu -->
+  <div class="mobile-menu">
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#process">Process</a>
+    <a href="#contact">Contact</a>
+    <a href="#pricing" class="btn btn-primary">Get Started</a>
+  </div>
+</header>
 
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop" alt="Spring Rolls" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Spring Rolls</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Crispy rolls stuffed with mixed vegetables and glass noodles</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Spring Roll Wrappers</li>
-                                <li>Cabbage</li>
-                                <li>Carrots</li>
-                                <li>Glass Noodles</li>
-                                <li>Bean Sprouts</li>
-                                <li>Soy Sauce</li>
-                                <li>Sesame Oil</li>
-                                <li>Ginger</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹180</span>
-                        </div>
-                    </div>
-                </article>
+<main>
 
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop" alt="Honey Chilli Potato" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Honey Chilli Potato</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Crispy potato fingers tossed in sweet-spicy honey chili glaze</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Potatoes</li>
-                                <li>Corn Flour</li>
-                                <li>Honey</li>
-                                <li>Red Chili Sauce</li>
-                                <li>Soy Sauce</li>
-                                <li>Garlic</li>
-                                <li>Sesame Seeds</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹210</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-blobs" aria-hidden="true">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
 
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop" alt="Chicken Lollipop" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chicken Lollipop</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Crunchy fried chicken lollipops served with schezwan dip</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Chicken Wings</li>
-                                <li>Ginger-Garlic Paste</li>
-                                <li>Soy Sauce</li>
-                                <li>Corn Flour</li>
-                                <li>Red Chili Paste</li>
-                                <li>Black Pepper</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹320</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Main Course Section -->
-        <section id="main-course" class="menu-section">
-            <h2 class="section-title">Main Course</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop" alt="Butter Chicken" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Butter Chicken</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Tender chicken in rich, creamy tomato-based gravy with butter</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Chicken Breast</li>
-                                <li>Tomato Puree</li>
-                                <li>Heavy Cream</li>
-                                <li>Butter</li>
-                                <li>Kashmiri Red Chili</li>
-                                <li>Ginger-Garlic Paste</li>
-                                <li>Garam Masala</li>
-                                <li>Fenugreek Leaves</li>
-                                <li>Honey</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹350</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop" alt="Dal Makhani" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Dal Makhani</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Slow-cooked black lentils in creamy tomato gravy with spices</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Black Lentils (Urad Dal)</li>
-                                <li>Kidney Beans</li>
-                                <li>Tomatoes</li>
-                                <li>Cream</li>
-                                <li>Butter</li>
-                                <li>Ginger-Garlic Paste</li>
-                                <li>Cumin Seeds</li>
-                                <li>Red Chili Powder</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹260</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop" alt="Paneer Lababdar" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Paneer Lababdar</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Soft paneer cubes in creamy onion-tomato gravy and spices</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Paneer</li>
-                                <li>Onions</li>
-                                <li>Tomato Puree</li>
-                                <li>Cream</li>
-                                <li>Kasuri Methi</li>
-                                <li>Garam Masala</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹320</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=400&h=300&fit=crop" alt="Fish Curry" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Fish Curry</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Coastal style fish simmered in tangy coconut-spice gravy</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Fresh Fish Fillet</li>
-                                <li>Coconut Milk</li>
-                                <li>Tamarind</li>
-                                <li>Curry Leaves</li>
-                                <li>Mustard Seeds</li>
-                                <li>Red Chili</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹390</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Pizza Section -->
-        <section id="pizza" class="menu-section">
-            <h2 class="section-title">Pizza</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop" alt="Margherita Pizza" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Margherita</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Classic pizza with fresh mozzarella, tomato sauce and basil</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Pizza Dough</li>
-                                <li>San Marzano Tomatoes</li>
-                                <li>Fresh Mozzarella</li>
-                                <li>Fresh Basil</li>
-                                <li>Olive Oil</li>
-                                <li>Garlic</li>
-                                <li>Salt</li>
-                                <li>Oregano</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹299</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop" alt="Pepperoni Pizza" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Pepperoni</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Loaded with spicy pepperoni slices, mozzarella and tomato sauce</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Pizza Dough</li>
-                                <li>Pepperoni Slices</li>
-                                <li>Mozzarella Cheese</li>
-                                <li>Tomato Sauce</li>
-                                <li>Olive Oil</li>
-                                <li>Italian Herbs</li>
-                                <li>Red Pepper Flakes</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹399</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop" alt="Farmhouse Pizza" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Farmhouse Pizza</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Loaded with onions, capsicum, mushrooms and sweet corn</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Pizza Base</li>
-                                <li>Mozzarella Cheese</li>
-                                <li>Capsicum</li>
-                                <li>Onions</li>
-                                <li>Mushrooms</li>
-                                <li>Sweet Corn</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹369</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop" alt="Chicken Tikka Pizza" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chicken Tikka Pizza</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Indian style pizza topped with smoky chicken tikka pieces</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Pizza Dough</li>
-                                <li>Chicken Tikka</li>
-                                <li>Mozzarella</li>
-                                <li>Onions</li>
-                                <li>Bell Peppers</li>
-                                <li>Tandoori Sauce</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹449</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Burgers Section -->
-        <section id="burgers" class="menu-section">
-            <h2 class="section-title">Burgers</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Classic Cheeseburger" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Classic Cheeseburger</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Juicy beef patty with cheddar cheese, lettuce, tomato and special sauce</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Beef Patty</li>
-                                <li>Cheddar Cheese</li>
-                                <li>Brioche Bun</li>
-                                <li>Lettuce</li>
-                                <li>Tomato</li>
-                                <li>Onions</li>
-                                <li>Pickles</li>
-                                <li>Special Sauce</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹320</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=300&fit=crop" alt="Veggie Burger" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Veggie Burger</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Crispy vegetable patty with fresh greens and tangy mayo</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Mixed Vegetable Patty</li>
-                                <li>Whole Wheat Bun</li>
-                                <li>Lettuce</li>
-                                <li>Tomato</li>
-                                <li>Onion Rings</li>
-                                <li>Cheese Slice</li>
-                                <li>Tangy Mayo</li>
-                                <li>Mustard</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹240</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop" alt="Grilled Chicken Burger" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Grilled Chicken Burger</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Flame grilled chicken patty with lettuce and peri-peri mayo</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Chicken Patty</li>
-                                <li>Burger Bun</li>
-                                <li>Lettuce</li>
-                                <li>Onions</li>
-                                <li>Cheese Slice</li>
-                                <li>Peri-Peri Mayo</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹340</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop" alt="Double Cheese Burger" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Double Cheese Burger</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">A rich cheesy burger layered with two patties and sauces</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Veg Patties</li>
-                                <li>Cheddar Cheese</li>
-                                <li>Sesame Bun</li>
-                                <li>Lettuce</li>
-                                <li>Pickled Onions</li>
-                                <li>Burger Sauce</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹290</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Pasta Section -->
-        <section id="pasta" class="menu-section">
-            <h2 class="section-title">Pasta</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=400&h=300&fit=crop" alt="Alfredo Pasta" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Alfredo Pasta</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Creamy white sauce pasta with parmesan and garlic bread</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Fettuccine Pasta</li>
-                                <li>Heavy Cream</li>
-                                <li>Parmesan Cheese</li>
-                                <li>Butter</li>
-                                <li>Garlic</li>
-                                <li>Black Pepper</li>
-                                <li>Parsley</li>
-                                <li>Nutmeg</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹280</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop" alt="Arrabbiata Pasta" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Arrabbiata</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Spicy tomato sauce pasta with chili flakes and fresh herbs</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Penne Pasta</li>
-                                <li>Crushed Tomatoes</li>
-                                <li>Red Chili Flakes</li>
-                                <li>Garlic</li>
-                                <li>Olive Oil</li>
-                                <li>Fresh Basil</li>
-                                <li>Parmesan</li>
-                                <li>Salt</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹260</span>
-                            <span class="spicy-indicator">🌶️</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=300&fit=crop" alt="Pesto Pasta" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Pesto Pasta</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Fresh basil pesto pasta with parmesan and cherry tomatoes</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Penne Pasta</li>
-                                <li>Fresh Basil</li>
-                                <li>Pine Nuts</li>
-                                <li>Parmesan</li>
-                                <li>Garlic</li>
-                                <li>Olive Oil</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹320</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop" alt="Chicken Penne Pasta" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chicken Penne Pasta</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type non-veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Creamy penne tossed with grilled chicken and herbs</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Penne Pasta</li>
-                                <li>Chicken Strips</li>
-                                <li>Cream</li>
-                                <li>Parmesan</li>
-                                <li>Garlic</li>
-                                <li>Italian Herbs</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹360</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Drinks Section -->
-        <section id="drinks" class="menu-section">
-            <h2 class="section-title">Drinks</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&h=300&fit=crop" alt="Mango Lassi" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Mango Lassi</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Refreshing yogurt-based drink blended with sweet mango pulp</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Fresh Yogurt</li>
-                                <li>Mango Pulp</li>
-                                <li>Sugar</li>
-                                <li>Cardamom</li>
-                                <li>Ice</li>
-                                <li>Milk</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹120</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop" alt="Cold Coffee" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Cold Coffee</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Chilled creamy coffee blended with ice cream and chocolate</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Espresso Coffee</li>
-                                <li>Milk</li>
-                                <li>Vanilla Ice Cream</li>
-                                <li>Chocolate Syrup</li>
-                                <li>Sugar</li>
-                                <li>Ice</li>
-                                <li>Whipped Cream</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹150</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop" alt="Virgin Mojito" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Virgin Mojito</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Fresh mint and lime cooler with soda for a zesty refreshment</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Fresh Mint</li>
-                                <li>Lime</li>
-                                <li>Sugar Syrup</li>
-                                <li>Soda Water</li>
-                                <li>Ice Cubes</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹130</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&h=300&fit=crop" alt="Chocolate Milkshake" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chocolate Milkshake</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Thick chocolate shake topped with whipped cream and choco chips</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Milk</li>
-                                <li>Chocolate Ice Cream</li>
-                                <li>Cocoa Powder</li>
-                                <li>Chocolate Syrup</li>
-                                <li>Whipped Cream</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹180</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-        <!-- Desserts Section -->
-        <section id="desserts" class="menu-section">
-            <h2 class="section-title">Desserts</h2>
-            <div class="menu-grid">
-                
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&h=300&fit=crop" alt="Gulab Jamun" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Gulab Jamun</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Soft milk-solid dumplings soaked in rose-flavored sugar syrup</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Khoya (Milk Solids)</li>
-                                <li>All-Purpose Flour</li>
-                                <li>Baking Soda</li>
-                                <li>Sugar</li>
-                                <li>Rose Water</li>
-                                <li>Cardamom</li>
-                                <li>Saffron</li>
-                                <li>Ghee</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹100</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop" alt="Chocolate Brownie" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Chocolate Brownie</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Warm fudgy brownie served with vanilla ice cream and chocolate sauce</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Dark Chocolate</li>
-                                <li>Butter</li>
-                                <li>Sugar</li>
-                                <li>Eggs</li>
-                                <li>All-Purpose Flour</li>
-                                <li>Cocoa Powder</li>
-                                <li>Vanilla Extract</li>
-                                <li>Walnuts</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹180</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&h=300&fit=crop" alt="Blueberry Cheesecake" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Blueberry Cheesecake</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Creamy baked cheesecake with blueberry compote topping</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Cream Cheese</li>
-                                <li>Digestive Biscuit Base</li>
-                                <li>Fresh Cream</li>
-                                <li>Blueberry Sauce</li>
-                                <li>Vanilla</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹240</span>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="menu-card">
-                    <div class="card-image">
-                        <img src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop" alt="Ice Cream Sundae" loading="lazy">
-                    </div>
-                    <div class="card-content">
-                        <div class="card-header">
-                            <h3 class="dish-name">Ice Cream Sundae</h3>
-                            <div class="card-icons">
-                                <button class="ingredients-btn" aria-label="View ingredients">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
-                                        <circle cx="12" cy="12" r="3"></circle>
-                                    </svg>
-                                </button>
-                                <span class="food-type veg"></span>
-                            </div>
-                        </div>
-                        <p class="dish-description">Three scoop sundae with nuts, chocolate sauce and wafer</p>
-                        <div class="ingredients-panel">
-                            <h4>Ingredients</h4>
-                            <ul>
-                                <li>Vanilla Ice Cream</li>
-                                <li>Chocolate Ice Cream</li>
-                                <li>Strawberry Ice Cream</li>
-                                <li>Chocolate Sauce</li>
-                                <li>Roasted Nuts</li>
-                            </ul>
-                        </div>
-                        <div class="card-footer">
-                            <span class="price">₹220</span>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>📍 Visit Us</h4>
-                <p>123 Food Street, Gourmet Lane<br>Mumbai, Maharashtra 400001</p>
-            </div>
-            <div class="footer-section">
-                <h4>📞 Contact</h4>
-                <p>+91 98765 43210</p>
-            </div>
-            <div class="footer-section">
-                <h4>🕐 Hours</h4>
-                <p>Mon - Sun: 11:00 AM - 11:00 PM</p>
-            </div>
-            <div class="footer-social">
-                <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="social-link" aria-label="WhatsApp">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.435 9.884-9.881 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
-                    </svg>
-                </a>
-                <a href="https://www.google.com/maps/search/?api=1&query=123+Food+Street+Gourmet+Lane+Mumbai+Maharashtra+400001" target="_blank" rel="noopener" class="social-link" aria-label="Google Maps">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-                    </svg>
-                </a>
-                <a href="https://instagram.com" target="_blank" rel="noopener" class="social-link" aria-label="Instagram">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-                        <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
-                    </svg>
-                </a>
-            </div>
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow">Digital QR Menus, Done Beautifully</p>
+      <h1>Transform Your Restaurant with a Smart Digital QR Menu</h1>
+      <p class="hero-sub">Offer your customers a modern dining experience with beautifully designed digital menus that are easy to update and accessible through a QR code.</p>
+      <div class="hero-actions">
+        <a href="#pricing" class="btn btn-primary btn-lg">View Pricing</a>
+        <a href="tel:+918511028388" class="btn btn-outline btn-lg">Contact Us</a>
+      </div>
+      <div class="hero-trust">
+        <div class="avatars" aria-hidden="true">
+          <span></span><span></span><span></span><span></span>
         </div>
-        <div class="footer-bottom">
-            <p>© 2026 Spice Garden. All rights reserved.</p>
+        <p><strong>250+</strong> restaurants already serving smarter</p>
+      </div>
+    </div>
+
+    <div class="hero-visual" aria-hidden="true">
+      <!-- floating rating chip -->
+      <div class="float-card float-rating">
+        <span class="stars">★★★★★</span>
+        <span class="float-rating-text">4.9 · 250+ menus launched</span>
+      </div>
+
+      <!-- floating QR card -->
+      <div class="float-card float-qr">
+        <div class="qr-grid">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
         </div>
-    </footer>
+        <p>Scan to view menu</p>
+      </div>
 
-    <button type="button" class="back-to-top" aria-label="Back to top">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-            <path d="M12 19V5"></path>
-            <path d="m5 12 7-7 7 7"></path>
-        </svg>
-    </button>
+      <!-- the phone mockup -->
+      <div class="phone">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="screen-header">
+            <span class="screen-logo"></span>
+            <div>
+              <strong>The White Root</strong>
+              <small>Where Taste Meets Flavour</small>
+            </div>
+          </div>
+          <div class="screen-tabs">
+            <span class="tab tab-active">Starters</span>
+            <span class="tab">Mains</span>
+            <span class="tab">Pizza</span>
+          </div>
+          <div class="screen-dish">
+            <div class="dish-img dish-img-1"></div>
+            <div class="dish-info">
+              <strong>Paneer Tikka <span class="veg-dot"></span></strong>
+              <small>Grilled cottage cheese, Indian spices</small>
+            </div>
+            <span class="dish-price">₹220</span>
+          </div>
+          <div class="screen-dish">
+            <div class="dish-img dish-img-2"></div>
+            <div class="dish-info">
+              <strong>Chicken Wings <span class="nonveg-dot"></span></strong>
+              <small>Crispy, tossed in buffalo sauce</small>
+            </div>
+            <span class="dish-price">₹280</span>
+          </div>
+          <div class="screen-dish">
+            <div class="dish-img dish-img-3"></div>
+            <div class="dish-info">
+              <strong>Honey Chilli Potato <span class="veg-dot"></span></strong>
+              <small>Sweet-spicy honey chilli glaze</small>
+            </div>
+            <span class="dish-price">₹210</span>
+          </div>
+        </div>
+      </div>
 
-    <script src="script.js?v=20260623-1"></script>
+      <!-- live update chip -->
+      <div class="float-card float-live">
+        <span class="pulse-dot"></span> Menu updated live
+      </div>
+
+      <span class="scan-line" aria-hidden="true"></span>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LOGOS / STAT STRIP ============ -->
+<section class="stat-strip">
+  <div class="container stat-grid">
+    <div class="stat"><strong>250+</strong><span>Menus Launched</span></div>
+    <div class="stat"><strong>4.9★</strong><span>Average Rating</span></div>
+    <div class="stat"><strong>&lt;48 hrs</strong><span>Average Turnaround</span></div>
+    <div class="stat"><strong>100%</strong><span>Lifetime Ownership</span></div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section" id="highlights">
+  <div class="container">
+    <p class="eyebrow center">Everything Your Menu Needs</p>
+    <h2 class="section-title center">One menu. Every feature your guests expect.</h2>
+    <p class="section-sub center">Built specifically for restaurants, cafes and cloud kitchens that want to look as good online as they taste on the plate.</p>
+
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1.2"/><rect x="14" y="3" width="7" height="7" rx="1.2"/><rect x="3" y="14" width="7" height="7" rx="1.2"/><path d="M14 14h3v3M20 14v3h-3M14 20h7"/></svg></span>
+        <h3>QR Code Menu</h3>
+        <p>Guests scan and browse instantly — no app download required.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h12M4 12h9M4 18h12"/><path d="M19 15v6M16 18h6"/></svg></span>
+        <h3>Unlimited Food Items</h3>
+        <p>Add as many dishes as your kitchen serves, with room to grow.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="15" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M3 16l5-4 4 3 4-5 5 6"/></svg></span>
+        <h3>Food Images</h3>
+        <p>Show every dish at its best with rich, appetising photography.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2.5" width="10" height="19" rx="2.4"/><path d="M11 18.3h2"/></svg></span>
+        <h3>Mobile Responsive</h3>
+        <p>Looks flawless on every phone, tablet and screen size.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 11A8 8 0 105.5 16.5M4 11V6m0 5h5"/></svg></span>
+        <h3>Instant Updates</h3>
+        <p>Change prices or specials in seconds — no reprinting ever again.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 5a5.5 5.5 0 019.5 7c-2.5 4.4-9.5 9-9.5 9z" opacity="0"/><path d="M3 20l1.3-4A8 8 0 1112 21a8 8 0 01-6.7-1L3 20z"/><path d="M8.5 9.5c.3 2.5 2.6 4.8 5.1 5.1"/></svg></span>
+        <h3>WhatsApp Integration</h3>
+        <p>Let guests message you directly for orders or reservations.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-6 7-12a7 7 0 10-14 0c0 6 7 12 7 12z"/><circle cx="12" cy="9" r="2.4"/></svg></span>
+        <h3>Google Maps</h3>
+        <p>One tap and your guests are walking through your front door.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="12" r="2.6"/><circle cx="18" cy="6" r="2.6"/><circle cx="18" cy="18" r="2.6"/><path d="M8.3 10.7l7.4-3.4M8.3 13.3l7.4 3.4"/></svg></span>
+        <h3>Social Links</h3>
+        <p>Connect Instagram and Facebook right from the menu.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg></span>
+        <h3>Premium Design</h3>
+        <p>A look and feel that matches the quality of your food.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg></span>
+        <h3>Fast Loading</h3>
+        <p>Built lean, so your menu opens before the page even settles.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21a9 9 0 100-18 5 5 0 000 10 1.6 1.6 0 011.2 2.7A2 2 0 0012 21z"/><circle cx="8" cy="9" r=".9" fill="currentColor" stroke="none"/><circle cx="12" cy="6.5" r=".9" fill="currentColor" stroke="none"/><circle cx="16" cy="9" r=".9" fill="currentColor" stroke="none"/></svg></span>
+        <h3>Restaurant Branding</h3>
+        <p>Your colours, your logo, your identity — fully yours.</p>
+      </div>
+
+      <div class="feature-card">
+        <span class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M6 12a3.5 3.5 0 110-.01M18 12a3.5 3.5 0 110-.01M6 12c0-2.5 2-4.5 6-4.5M18 12c0 2.5-2 4.5-6 4.5"/></svg></span>
+        <h3>Lifetime Ownership</h3>
+        <p>One-time cost. The menu is yours, for as long as you want it.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRICING ============ -->
+<section class="section section-tint" id="pricing">
+  <div class="container">
+    <p class="eyebrow center">Simple, Transparent Pricing</p>
+    <h2 class="section-title center">Pick the plan that fits your restaurant</h2>
+    <p class="section-sub center">One-time pricing. No hidden monthly fees, no surprises at checkout.</p>
+
+    <div class="pricing-grid">
+
+      <!-- GO -->
+      <div class="price-card">
+        <h3>GO</h3>
+        <p class="price-tag"><span>₹</span>2,000</p>
+        <p class="price-note">one-time</p>
+        <ul class="price-features">
+          <li>Static Header</li>
+          <li>Inline Expand Ingredients (optional)</li>
+          <li>Mobile Friendly</li>
+          <li>Restaurant Logo</li>
+          <li>1 Month Support</li>
+        </ul>
+        <div class="price-actions">
+          <a href="https://wa.me/918511028388?text=Hi%21%20I%27m%20interested%20in%20the%20GO%20plan%20%28%E2%82%B92%2C000%29%20for%20my%20restaurant%27s%20digital%20QR%20menu.%20Could%20you%20share%20more%20details%3F" target="_blank" rel="noopener" class="btn btn-outline-dark btn-block">Choose GO</a>
+          <a href="https://learndev0509.github.io/Restaurant-menu-website/v1/" target="_blank" rel="noopener" class="btn btn-ghost-dark btn-block">View Demo</a>
+        </div>
+      </div>
+
+      <!-- PRO — highlighted -->
+      <div class="price-card price-card-pro">
+        <span class="badge-popular">★ MOST POPULAR</span>
+        <h3>PRO</h3>
+        <p class="price-tag"><span>₹</span>5,000</p>
+        <p class="price-note">one-time</p>
+        <p class="price-everything">Everything in GO, plus:</p>
+        <ul class="price-features">
+          <li>Dynamic Header</li>
+          <li>Search</li>
+          <li>Veg / Non-veg Filter</li>
+          <li>Ingredients on Flip Card</li>
+          <li>Badges (Special / Popular)</li>
+          <li>Portion / Serves / Qty</li>
+          <li>Priority Support</li>
+        </ul>
+        <div class="price-actions">
+          <a href="https://wa.me/918511028388?text=Hi%21%20I%27m%20interested%20in%20the%20PRO%20plan%20%28%E2%82%B95%2C000%29%20for%20my%20restaurant%27s%20digital%20QR%20menu.%20Could%20you%20share%20more%20details%3F" target="_blank" rel="noopener" class="btn btn-white btn-block">Choose PRO</a>
+          <a href="https://learndev0509.github.io/Restaurant-menu-website/v2/" target="_blank" rel="noopener" class="btn btn-ghost-light btn-block">View Demo</a>
+        </div>
+      </div>
+
+      <!-- MAX -->
+      <div class="price-card price-card-premium">
+        <h3>MAX</h3>
+        <p class="price-tag"><span>₹</span>8,000</p>
+        <p class="price-note">one-time</p>
+        <p class="price-everything">Everything in PRO, plus:</p>
+        <ul class="price-features">
+          <li>Dynamic Header + Hero Banner</li>
+          <li>Dark Mode</li>
+          <li>Live Hours</li>
+          <li>Map / Instagram / Contact Footer</li>
+          <li>Back to Top</li>
+          <li>Premium Support</li>
+        </ul>
+        <div class="price-actions">
+          <a href="https://wa.me/918511028388?text=Hi%21%20I%27m%20interested%20in%20the%20MAX%20plan%20%28%E2%82%B98%2C000%29%20for%20my%20restaurant%27s%20digital%20QR%20menu.%20Could%20you%20share%20more%20details%3F" target="_blank" rel="noopener" class="btn btn-gold btn-block">Choose MAX</a>
+          <a href="https://learndev0509.github.io/Restaurant-menu-website/v3/" target="_blank" rel="noopener" class="btn btn-ghost-light btn-block">View Demo</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMPARISON TABLE ============ -->
+<section class="section" id="features">
+  <div class="container">
+    <p class="eyebrow center">Compare Plans</p>
+    <h2 class="section-title center">Every feature, side by side</h2>
+
+    <div class="table-wrap">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="feature-col">Feature</th>
+            <th>GO</th>
+            <th class="col-pro">PRO</th>
+            <th>MAX</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Header</td><td>Static</td><td class="col-pro">Dynamic</td><td>Dynamic + Hero Banner</td></tr>
+          <tr><td>Search</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Veg / Non-veg Filter</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Dark Mode</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-no">✗</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Ingredients</td><td>Inline Expand (optional)</td><td class="col-pro">Flip Card</td><td>Flip Card</td></tr>
+          <tr><td>Badges (Special / Popular)</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Portion / Serves / Qty</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Live Hours</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-no">✗</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Map / Instagram / Contact Footer</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-no">✗</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Back to Top</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-no">✗</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>QR Code Menu</td><td><span class="ico-no">✗</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Food Items</td><td>Up to 50</td><td class="col-pro">Up to 150</td><td>Unlimited</td></tr>
+          <tr><td>Categories</td><td>Limited</td><td class="col-pro">Extended</td><td>Unlimited</td></tr>
+          <tr><td>Food Images</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>WhatsApp Button</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Google Maps</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Social Links</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Restaurant Branding</td><td>Logo only</td><td class="col-pro">Logo &amp; Wallpaper</td><td>Full Branding</td></tr>
+          <tr><td>Design Tier</td><td>Standard</td><td class="col-pro">Professional</td><td>Fully Custom + Luxury UI</td></tr>
+          <tr><td>Animations</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-no">—</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Multi-language Menu</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-no">—</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>SEO Optimisation</td><td><span class="ico-no">—</span></td><td class="col-pro"><span class="ico-no">—</span></td><td><span class="ico-yes">✓</span></td></tr>
+          <tr><td>Support</td><td>1 Month</td><td class="col-pro">Up to 3 Months</td><td>Up to 3 Years <small style="display:block;opacity:.7;font-size:.78rem;margin-top:2px;">(extra charges after 1 year)</small></td></tr>
+          <tr><td>Lifetime Ownership</td><td><span class="ico-yes">✓</span></td><td class="col-pro"><span class="ico-yes">✓</span></td><td><span class="ico-yes">✓</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ WHY CHOOSE US ============ -->
+<section class="section section-dark">
+  <div class="container">
+    <p class="eyebrow center eyebrow-light">Why Restaurants Choose Us</p>
+    <h2 class="section-title center title-light">Designed for restaurants. Trusted by owners.</h2>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.5L21 11l-6.6 2.5L12 20l-2.4-6.5L3 11l6.6-2.5z"/></svg></span>
+        <h3>Trusted by Local Favourites</h3>
+        <p>Built specifically for Indian restaurants, cafes and cloud kitchens.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z"/><path d="M9 12l2 2 4-4"/></svg></span>
+        <h3>No Tech Headaches</h3>
+        <p>We handle hosting, design and updates — you just run your restaurant.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l5-5 4 3 8-9"/><path d="M14 6h6v6"/></svg></span>
+        <h3>Built to Convert</h3>
+        <p>Every layout is designed to make guests order more, faster.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 10-3.8 7.1L21 20l-1.2-3.6c.78-1.42 1.2-2.84 1.2-4.9z"/><path d="M9 11h.01M12 11h.01M15 11h.01"/></svg></span>
+        <h3>Real Support</h3>
+        <p>A real person picks up the phone when you need a change made.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-7.5-7-12.5A7 7 0 0112 2a7 7 0 017 6.5C19 13.5 12 21 12 21z"/><circle cx="12" cy="9" r="2.3"/></svg></span>
+        <h3>Launch in Days</h3>
+        <p>From first contact to a QR code on your table, typically under a week.</p>
+      </div>
+      <div class="why-card">
+        <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9.5L12 3l9 6.5M5 10v9h14v-9"/><path d="M10 19v-5h4v5"/></svg></span>
+        <h3>Transparent Pricing</h3>
+        <p>One clear price. No hidden fees, no monthly surprises.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESS ============ -->
+<section class="section" id="process">
+  <div class="container">
+    <p class="eyebrow center">How It Works</p>
+    <h2 class="section-title center">From first message to a live menu</h2>
+
+    <div class="process-rail">
+      <div class="process-step">
+        <span class="step-num">01</span>
+        <h3>Contact Us</h3>
+        <p>Tell us about your restaurant and the plan you're leaning towards.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">02</span>
+        <h3>Select a Plan</h3>
+        <p>Pick GO, PRO or MAX based on what your menu needs.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">03</span>
+        <h3>Design &amp; Development</h3>
+        <p>We build your menu with your dishes, photos and brand colours.</p>
+      </div>
+      <div class="process-step">
+        <span class="step-num">04</span>
+        <h3>Launch Your QR Menu</h3>
+        <p>Print your QR code, place it on the table, and start serving smarter.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FINAL CTA ============ -->
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer" id="contact">
+  <div class="container footer-grid">
+    <div class="footer-brand">
+      <a href="#" class="brand">
+        <span class="brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none"><rect x="2" y="2" width="24" height="24" rx="7" fill="url(#bg2)"/><path d="M9 14h10M9 10h6M9 18h7" stroke="white" stroke-width="1.8" stroke-linecap="round"/><defs><linearGradient id="bg2" x1="0" y1="0" x2="28" y2="28"><stop offset="0" stop-color="#FF6B00"/><stop offset="1" stop-color="#FF3D3D"/></linearGradient></defs></svg>
+        </span>
+        <span class="brand-name">Plate<span class="brand-dot">&amp;</span>Pixel</span>
+      </a>
+      <p>Smart digital QR menus, designed and built for restaurants that want to look as good online as their food tastes.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M15 8h2V5h-2a4 4 0 00-4 4v2H9v3h2v6h3v-6h2.2l.8-3H14V9a1 1 0 011-1z"/></svg></a>
+        <a href="#" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 20l1.3-4A8 8 0 1112 21a8 8 0 01-6.7-1L3 20z"/><path d="M8.5 9.5c.3 2.5 2.6 4.8 5.1 5.1"/></svg></a>
+      </div>
+    </div>
+
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li>📞 <a href="tel:+918511028388">+91 85110 28388</a></li>
+        <li>✉️ hello@plateandpixel.in</li>
+        <li>🌐 www.plateandpixel.in</li>
+      </ul>
+    </div>
+
+    <div class="footer-col">
+      <h4>Studio</h4>
+      <ul>
+        <li>Ahmedabad, Gujarat, India</li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#process">Process</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container footer-bottom">
+    <p>© 2026 Plate &amp; Pixel. All rights reserved.</p>
+    <button class="back-to-top" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">↑</button>
+  </div>
+</footer>
+
+<script>
+  // Close the mobile menu automatically after a nav link is tapped.
+  document.querySelectorAll('.mobile-menu a').forEach(function(link){
+    link.addEventListener('click', function(){
+      document.getElementById('nav-toggle').checked = false;
+    });
+  });
+</script>
 </body>
 </html>
