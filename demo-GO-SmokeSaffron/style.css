@@ -1,0 +1,64 @@
+/* =====================================================================
+   SMOKE & SAFFRON — GO tier · plain, static text menu (basic)
+   ===================================================================== */
+:root{
+  --bg:#FDFBF7; --ink:#221D19; --muted:#7C7268; --accent:#B23A2E; --line:#EAE3D9;
+  --veg:#158A3E; --nonveg:#B23A2E; --maxw:720px;
+  --font:system-ui,-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--bg);line-height:1.5}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* Header */
+.head{max-width:var(--maxw);margin:0 auto;padding:34px 22px 22px;text-align:center;border-bottom:2px solid var(--ink)}
+.logo{font-size:1.7rem;margin-bottom:6px}
+.name{font-size:2rem;font-weight:800;letter-spacing:-.01em}
+.tag{color:var(--muted);font-size:.95rem;margin-top:4px}
+.meta{color:var(--ink);font-size:.84rem;font-weight:600;margin-top:14px}
+
+/* Category nav (simple sticky bar) */
+.catnav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line);
+  display:flex;gap:6px;overflow-x:auto;justify-content:flex-start;
+  max-width:var(--maxw);margin:0 auto;padding:11px 22px;scrollbar-width:none}
+.catnav::-webkit-scrollbar{display:none}
+.catnav a{white-space:nowrap;font-size:.83rem;font-weight:600;color:var(--muted);padding:5px 10px;border-radius:6px}
+.catnav a:hover{color:var(--accent);background:#fff}
+
+/* Menu */
+.menu{max-width:var(--maxw);margin:0 auto;padding:8px 22px 20px}
+.section{padding-top:30px;scroll-margin-top:56px}
+.section-title{font-size:1.15rem;font-weight:800;text-transform:uppercase;letter-spacing:.08em;
+  color:var(--accent);padding-bottom:8px;border-bottom:1px solid var(--line);margin-bottom:6px}
+
+.items{}
+.item{padding:14px 0;border-bottom:1px solid var(--line)}
+.item:last-child{border-bottom:none}
+.item-head{display:flex;align-items:baseline;gap:9px}
+.item-name{font-weight:700;font-size:1.02rem}
+.hot{font-size:.85em}
+.dots{flex:1;border-bottom:1.5px dotted var(--line);transform:translateY(-3px)}
+.item-price{font-weight:800;font-size:1.02rem;color:var(--accent);white-space:nowrap}
+.item-desc{color:var(--muted);font-size:.88rem;margin-top:4px;padding-left:23px}
+
+/* Veg / non-veg mark */
+.vmark{flex:none;align-self:center;width:15px;height:15px;border-radius:3px;background:#fff;
+  display:inline-grid;place-items:center;border:2px solid var(--veg)}
+.vmark::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--veg)}
+.vmark.nv{border-color:var(--nonveg)}
+.vmark.nv::before{width:0;height:0;border-radius:0;background:none;
+  border-left:4px solid transparent;border-right:4px solid transparent;border-bottom:7px solid var(--nonveg)}
+
+/* Footer */
+.foot{max-width:var(--maxw);margin:24px auto 0;padding:26px 22px;text-align:center;color:var(--muted);
+  font-size:.9rem;border-top:2px solid var(--ink)}
+.foot p{margin:3px 0}
+.foot-name{font-weight:800;font-size:1.1rem;color:var(--ink)}
+.foot-note{margin-top:12px;font-size:.76rem}
+
+@media (max-width:560px){
+  .name{font-size:1.7rem}
+  .item-price{font-size:.98rem}
+}
