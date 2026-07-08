@@ -634,3 +634,11 @@ body[data-active-menu="bar"]    .cat-tab[data-menus]:not([data-menus~="bar"]) { 
 .no-js .dish-front { aspect-ratio: 4 / 3; }
 .no-js .dish-back { transform: none; }
 .no-js .ingredients-btn, .no-js .details-btn { display: none; }
+
+/* ===== Live-menu loader additions (v=20260707-1) ===== */
+.menu-loading-note{
+  text-align:center;padding:60px 20px;opacity:.6;font-size:1rem;letter-spacing:.04em;
+}
+.dish-card.soldout .dish-front img{filter:grayscale(.9) brightness(.7)}
+.dish-card.soldout .dish-price{opacity:.55;text-decoration:line-through}
+.dish-card.soldout .dish-flag{background:#8a8a8a;color:#fff}

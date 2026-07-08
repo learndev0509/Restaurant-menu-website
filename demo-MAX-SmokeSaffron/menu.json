@@ -1,0 +1,4703 @@
+{
+ "_comment": "Single source of truth for the menu. Edit dishes here (or in the Google Sheet — see README-MENU.md). status: active | soldout | hidden.",
+ "settings": {
+  "sheetCsvUrl": "",
+  "_sheetCsvUrl_help": "Paste your published-to-web Google Sheet CSV link here to make the sheet the live menu source. Leave empty to use the dishes below."
+ },
+ "sections": [
+  {
+   "id": "starters",
+   "title": "Starters",
+   "emoji": "🍲",
+   "menus": "all lunch dinner",
+   "qty": "500 g",
+   "serves": "Serves 4"
+  },
+  {
+   "id": "soups",
+   "title": "Soups",
+   "emoji": "🍜",
+   "menus": "all lunch dinner",
+   "qty": "250 ml",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "salads",
+   "title": "Salads",
+   "emoji": "🥗",
+   "menus": "all lunch",
+   "qty": "200 g",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "tandoor-kebabs",
+   "title": "Tandoor & Kebabs",
+   "emoji": "🔥",
+   "menus": "all dinner bar",
+   "qty": "400 g",
+   "serves": "Serves 2"
+  },
+  {
+   "id": "main-course",
+   "title": "Main Course",
+   "emoji": "🍛",
+   "menus": "all lunch dinner",
+   "qty": "700 g",
+   "serves": "Serves 5"
+  },
+  {
+   "id": "biryani-rice",
+   "title": "Biryani & Rice",
+   "emoji": "🍚",
+   "menus": "all lunch dinner",
+   "qty": "500 g",
+   "serves": "Serves 2"
+  },
+  {
+   "id": "breads",
+   "title": "Breads",
+   "emoji": "🫓",
+   "menus": "all lunch dinner",
+   "qty": "1 pc",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "indo-chinese",
+   "title": "Indo-Chinese",
+   "emoji": "🥡",
+   "menus": "all dinner bar",
+   "qty": "350 g",
+   "serves": "Serves 2"
+  },
+  {
+   "id": "pizza",
+   "title": "Pizza",
+   "emoji": "🍕",
+   "menus": "all lunch bar",
+   "qty": "10 inch",
+   "serves": "Serves 3"
+  },
+  {
+   "id": "burgers",
+   "title": "Burgers",
+   "emoji": "🍔",
+   "menus": "all dinner bar",
+   "qty": "320 g",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "pasta",
+   "title": "Pasta",
+   "emoji": "🍝",
+   "menus": "all lunch dinner",
+   "qty": "450 g",
+   "serves": "Serves 2"
+  },
+  {
+   "id": "sandwiches-wraps",
+   "title": "Sandwiches & Wraps",
+   "emoji": "🌯",
+   "menus": "all lunch",
+   "qty": "280 g",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "south-indian",
+   "title": "South Indian",
+   "emoji": "🥞",
+   "menus": "all lunch",
+   "qty": "1 plate",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "drinks",
+   "title": "Drinks",
+   "emoji": "🥤",
+   "menus": "all lunch dinner bar",
+   "qty": "350 ml",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "shakes",
+   "title": "Shakes & Coolers",
+   "emoji": "🥤",
+   "menus": "all lunch dinner",
+   "qty": "400 ml",
+   "serves": "Serves 1"
+  },
+  {
+   "id": "desserts",
+   "title": "Desserts",
+   "emoji": "🍰",
+   "menus": "all dinner",
+   "qty": "300 g",
+   "serves": "Serves 2"
+  }
+ ],
+ "dishes": [
+  {
+   "section": "starters",
+   "name": "Paneer Tikka",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Grilled cottage cheese cubes marinated in Indian spices and yogurt",
+   "ingredients": [
+    "Paneer (Cottage Cheese)",
+    "Yogurt",
+    "Bell Peppers",
+    "Onions",
+    "Ginger-Garlic Paste",
+    "Red Chili Powder",
+    "Turmeric",
+    "Garam Masala",
+    "Lemon Juice"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chicken Wings",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Crispy fried wings tossed in spicy buffalo sauce",
+   "ingredients": [
+    "Chicken Wings",
+    "All-Purpose Flour",
+    "Buffalo Hot Sauce",
+    "Butter",
+    "Garlic Powder",
+    "Paprika",
+    "Salt & Pepper",
+    "Vegetable Oil"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1608039755401-742074f0548d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Spring Rolls",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Crispy rolls stuffed with mixed vegetables and glass noodles",
+   "ingredients": [
+    "Spring Roll Wrappers",
+    "Cabbage",
+    "Carrots",
+    "Glass Noodles",
+    "Bean Sprouts",
+    "Soy Sauce",
+    "Sesame Oil",
+    "Ginger"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1544025162-d76694265947?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Honey Chilli Potato",
+   "diet": "veg",
+   "price": 210,
+   "desc": "Crispy potato fingers tossed in sweet-spicy honey chili glaze",
+   "ingredients": [
+    "Potatoes",
+    "Corn Flour",
+    "Honey",
+    "Red Chili Sauce",
+    "Soy Sauce",
+    "Garlic",
+    "Sesame Seeds"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1573080496219-bb080dd4f877?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chicken Lollipop",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "Crunchy fried chicken lollipops served with schezwan dip",
+   "ingredients": [
+    "Chicken Wings",
+    "Ginger-Garlic Paste",
+    "Soy Sauce",
+    "Corn Flour",
+    "Red Chili Paste",
+    "Black Pepper"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Butter Chicken",
+   "diet": "non-veg",
+   "price": 350,
+   "desc": "Tender chicken in rich, creamy tomato-based gravy with butter",
+   "ingredients": [
+    "Chicken Breast",
+    "Tomato Puree",
+    "Heavy Cream",
+    "Butter",
+    "Kashmiri Red Chili",
+    "Ginger-Garlic Paste",
+    "Garam Masala",
+    "Fenugreek Leaves",
+    "Honey"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Dal Makhani",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Slow-cooked black lentils in creamy tomato gravy with spices",
+   "ingredients": [
+    "Black Lentils (Urad Dal)",
+    "Kidney Beans",
+    "Tomatoes",
+    "Cream",
+    "Butter",
+    "Ginger-Garlic Paste",
+    "Cumin Seeds",
+    "Red Chili Powder"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Paneer Lababdar",
+   "diet": "veg",
+   "price": 320,
+   "desc": "Soft paneer cubes in creamy onion-tomato gravy and spices",
+   "ingredients": [
+    "Paneer",
+    "Onions",
+    "Tomato Puree",
+    "Cream",
+    "Kasuri Methi",
+    "Garam Masala"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Fish Curry",
+   "diet": "non-veg",
+   "price": 390,
+   "desc": "Coastal style fish simmered in tangy coconut-spice gravy",
+   "ingredients": [
+    "Fresh Fish Fillet",
+    "Coconut Milk",
+    "Tamarind",
+    "Curry Leaves",
+    "Mustard Seeds",
+    "Red Chili"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1625944230945-1b7dd3b949ab?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Margherita",
+   "diet": "veg",
+   "price": 299,
+   "desc": "Classic pizza with fresh mozzarella, tomato sauce and basil",
+   "ingredients": [
+    "Pizza Dough",
+    "San Marzano Tomatoes",
+    "Fresh Mozzarella",
+    "Fresh Basil",
+    "Olive Oil",
+    "Garlic",
+    "Salt",
+    "Oregano"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1574071318508-1cdbab80d002?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Pepperoni",
+   "diet": "non-veg",
+   "price": 399,
+   "desc": "Loaded with spicy pepperoni slices, mozzarella and tomato sauce",
+   "ingredients": [
+    "Pizza Dough",
+    "Pepperoni Slices",
+    "Mozzarella Cheese",
+    "Tomato Sauce",
+    "Olive Oil",
+    "Italian Herbs",
+    "Red Pepper Flakes"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1628840042765-356cda07504e?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Farmhouse Pizza",
+   "diet": "veg",
+   "price": 369,
+   "desc": "Loaded with onions, capsicum, mushrooms and sweet corn",
+   "ingredients": [
+    "Pizza Base",
+    "Mozzarella Cheese",
+    "Capsicum",
+    "Onions",
+    "Mushrooms",
+    "Sweet Corn"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Chicken Tikka Pizza",
+   "diet": "non-veg",
+   "price": 449,
+   "desc": "Indian style pizza topped with smoky chicken tikka pieces",
+   "ingredients": [
+    "Pizza Dough",
+    "Chicken Tikka",
+    "Mozzarella",
+    "Onions",
+    "Bell Peppers",
+    "Tandoori Sauce"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1594007654729-407eedc4be65?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Classic Cheeseburger",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "Juicy beef patty with cheddar cheese, lettuce, tomato and special sauce",
+   "ingredients": [
+    "Beef Patty",
+    "Cheddar Cheese",
+    "Brioche Bun",
+    "Lettuce",
+    "Tomato",
+    "Onions",
+    "Pickles",
+    "Special Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Veggie Burger",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Crispy vegetable patty with fresh greens and tangy mayo",
+   "ingredients": [
+    "Mixed Vegetable Patty",
+    "Whole Wheat Bun",
+    "Lettuce",
+    "Tomato",
+    "Onion Rings",
+    "Cheese Slice",
+    "Tangy Mayo",
+    "Mustard"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1520072959219-c595dc870360?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Grilled Chicken Burger",
+   "diet": "non-veg",
+   "price": 340,
+   "desc": "Flame grilled chicken patty with lettuce and peri-peri mayo",
+   "ingredients": [
+    "Chicken Patty",
+    "Burger Bun",
+    "Lettuce",
+    "Onions",
+    "Cheese Slice",
+    "Peri-Peri Mayo"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1606755962773-d324e0a13086?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Double Cheese Burger",
+   "diet": "veg",
+   "price": 290,
+   "desc": "A rich cheesy burger layered with two patties and sauces",
+   "ingredients": [
+    "Veg Patties",
+    "Cheddar Cheese",
+    "Sesame Bun",
+    "Lettuce",
+    "Pickled Onions",
+    "Burger Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1550547660-d9450f859349?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Alfredo Pasta",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Creamy white sauce pasta with parmesan and garlic bread",
+   "ingredients": [
+    "Fettuccine Pasta",
+    "Heavy Cream",
+    "Parmesan Cheese",
+    "Butter",
+    "Garlic",
+    "Black Pepper",
+    "Parsley",
+    "Nutmeg"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1645112411341-6c4fd023714a?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Arrabbiata",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Spicy tomato sauce pasta with chili flakes and fresh herbs",
+   "ingredients": [
+    "Penne Pasta",
+    "Crushed Tomatoes",
+    "Red Chili Flakes",
+    "Garlic",
+    "Olive Oil",
+    "Fresh Basil",
+    "Parmesan",
+    "Salt"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1563379926898-05f4575a45d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Pesto Pasta",
+   "diet": "veg",
+   "price": 320,
+   "desc": "Fresh basil pesto pasta with parmesan and cherry tomatoes",
+   "ingredients": [
+    "Penne Pasta",
+    "Fresh Basil",
+    "Pine Nuts",
+    "Parmesan",
+    "Garlic",
+    "Olive Oil"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Chicken Penne Pasta",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "Creamy penne tossed with grilled chicken and herbs",
+   "ingredients": [
+    "Penne Pasta",
+    "Chicken Strips",
+    "Cream",
+    "Parmesan",
+    "Garlic",
+    "Italian Herbs"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Mango Lassi",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Refreshing yogurt-based drink blended with sweet mango pulp",
+   "ingredients": [
+    "Fresh Yogurt",
+    "Mango Pulp",
+    "Sugar",
+    "Cardamom",
+    "Ice",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1527661591475-527312dd65f5?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Cold Coffee",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Chilled creamy coffee blended with ice cream and chocolate",
+   "ingredients": [
+    "Espresso Coffee",
+    "Milk",
+    "Vanilla Ice Cream",
+    "Chocolate Syrup",
+    "Sugar",
+    "Ice",
+    "Whipped Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Virgin Mojito",
+   "diet": "veg",
+   "price": 130,
+   "desc": "Fresh mint and lime cooler with soda for a zesty refreshment",
+   "ingredients": [
+    "Fresh Mint",
+    "Lime",
+    "Sugar Syrup",
+    "Soda Water",
+    "Ice Cubes"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551538827-9c037cb4f32a?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Chocolate Milkshake",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Thick chocolate shake topped with whipped cream and choco chips",
+   "ingredients": [
+    "Milk",
+    "Chocolate Ice Cream",
+    "Cocoa Powder",
+    "Chocolate Syrup",
+    "Whipped Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577805947697-89e18249d767?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Gulab Jamun",
+   "diet": "veg",
+   "price": 100,
+   "desc": "Soft milk-solid dumplings soaked in rose-flavored sugar syrup",
+   "ingredients": [
+    "Khoya (Milk Solids)",
+    "All-Purpose Flour",
+    "Baking Soda",
+    "Sugar",
+    "Rose Water",
+    "Cardamom",
+    "Saffron",
+    "Ghee"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Chocolate Brownie",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Warm fudgy brownie served with vanilla ice cream and chocolate sauce",
+   "ingredients": [
+    "Dark Chocolate",
+    "Butter",
+    "Sugar",
+    "Eggs",
+    "All-Purpose Flour",
+    "Cocoa Powder",
+    "Vanilla Extract",
+    "Walnuts"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Blueberry Cheesecake",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Creamy baked cheesecake with blueberry compote topping",
+   "ingredients": [
+    "Cream Cheese",
+    "Digestive Biscuit Base",
+    "Fresh Cream",
+    "Blueberry Sauce",
+    "Vanilla"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1533134242443-d4fd215305ad?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Ice Cream Sundae",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Three scoop sundae with nuts, chocolate sauce and wafer",
+   "ingredients": [
+    "Vanilla Ice Cream",
+    "Chocolate Ice Cream",
+    "Strawberry Ice Cream",
+    "Chocolate Sauce",
+    "Roasted Nuts"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1563805042-7684c019e1cb?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Crispy Corn",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Golden fried corn kernels tossed with peppers and spring onion",
+   "ingredients": [
+    "Sweet Corn",
+    "Bell Peppers",
+    "Spring Onion",
+    "Pepper"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Hara Bhara Kebab",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Spinach and green-pea patties with a soft paneer centre",
+   "ingredients": [
+    "Spinach",
+    "Green Peas",
+    "Paneer",
+    "Potato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Veg Manchurian Dry",
+   "diet": "veg",
+   "price": 210,
+   "desc": "Vegetable dumplings wok-tossed in garlic-soy glaze",
+   "ingredients": [
+    "Mixed Vegetables",
+    "Garlic",
+    "Soy Sauce",
+    "Spring Onion"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chilli Paneer Dry",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Crisp paneer cubes in a fiery chilli-garlic toss",
+   "ingredients": [
+    "Paneer",
+    "Capsicum",
+    "Onion",
+    "Chilli Sauce"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Mushroom Duplex",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Stuffed button mushrooms, crumbed and fried",
+   "ingredients": [
+    "Mushrooms",
+    "Cheese",
+    "Corn",
+    "Breadcrumbs"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Cheese Corn Balls",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Molten cheese and corn croquettes",
+   "ingredients": [
+    "Cheese",
+    "Sweet Corn",
+    "Potato",
+    "Breadcrumbs"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Peri Peri Fries",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Crispy fries dusted in peri-peri spice",
+   "ingredients": [
+    "Potato",
+    "Peri Peri Spice",
+    "Herbs"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Nachos Supreme",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Loaded nachos with cheese sauce, salsa and jalapeños",
+   "ingredients": [
+    "Nachos",
+    "Cheese Sauce",
+    "Salsa",
+    "Jalapeños",
+    "Olives"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Onion Rings",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Beer-battered onion rings with ranch dip",
+   "ingredients": [
+    "Onion",
+    "Batter",
+    "Ranch Dip"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Stuffed Jalapeño Poppers",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Cream-cheese jalapeños, crumbed and fried",
+   "ingredients": [
+    "Jalapeños",
+    "Cream Cheese",
+    "Breadcrumbs"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Garlic Bread Supreme",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Wood-fired garlic bread with cheese and herbs",
+   "ingredients": [
+    "Bread",
+    "Garlic Butter",
+    "Mozzarella",
+    "Oregano"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Paneer 65",
+   "diet": "veg",
+   "price": 250,
+   "desc": "South-style spicy fried paneer with curry leaves",
+   "ingredients": [
+    "Paneer",
+    "Curry Leaves",
+    "Yogurt",
+    "Red Chilli"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Aloo Tikki Chaat",
+   "diet": "veg",
+   "price": 170,
+   "desc": "Crisp potato patties with yogurt, chutneys and sev",
+   "ingredients": [
+    "Potato",
+    "Yogurt",
+    "Tamarind Chutney",
+    "Sev"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Dahi Ke Kebab",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Hung-curd kebabs, crisp outside and molten inside",
+   "ingredients": [
+    "Hung Curd",
+    "Onion",
+    "Cashew",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Corn Salt & Pepper",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Crispy corn with burnt garlic, salt and cracked pepper",
+   "ingredients": [
+    "Sweet Corn",
+    "Garlic",
+    "Pepper",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chicken 65",
+   "diet": "non-veg",
+   "price": 290,
+   "desc": "Fiery South-style fried chicken with curry leaves",
+   "ingredients": [
+    "Chicken",
+    "Curry Leaves",
+    "Yogurt",
+    "Red Chilli"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chilli Chicken Dry",
+   "diet": "non-veg",
+   "price": 300,
+   "desc": "Crisp chicken tossed with peppers in chilli-garlic sauce",
+   "ingredients": [
+    "Chicken",
+    "Capsicum",
+    "Onion",
+    "Chilli Sauce"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Drums of Heaven",
+   "diet": "non-veg",
+   "price": 330,
+   "desc": "Glazed chicken drumettes, wok-tossed and sesame-flecked",
+   "ingredients": [
+    "Chicken Wings",
+    "Soy Glaze",
+    "Sesame",
+    "Garlic"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Fish Fingers",
+   "diet": "non-veg",
+   "price": 340,
+   "desc": "Golden fried fish strips with tartar sauce",
+   "ingredients": [
+    "Fish",
+    "Breadcrumbs",
+    "Tartar Sauce",
+    "Lemon"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Fish Amritsari",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "Ajwain-spiced battered fish, Amritsar style",
+   "ingredients": [
+    "Fish",
+    "Gram Flour",
+    "Ajwain",
+    "Chaat Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chicken Popcorn",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Bite-size crispy fried chicken",
+   "ingredients": [
+    "Chicken",
+    "Flour",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Garlic Butter Prawns",
+   "diet": "non-veg",
+   "price": 420,
+   "desc": "Prawns pan-seared in garlic butter",
+   "ingredients": [
+    "Prawns",
+    "Garlic",
+    "Butter",
+    "Parsley"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Mutton Seekh Roll Bites",
+   "diet": "non-veg",
+   "price": 380,
+   "desc": "Minced mutton seekh, sliced and seared",
+   "ingredients": [
+    "Mutton Mince",
+    "Onion",
+    "Ginger",
+    "Garam Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Egg Pakora",
+   "diet": "non-veg",
+   "price": 150,
+   "desc": "Boiled-egg fritters in spiced gram-flour batter",
+   "ingredients": [
+    "Egg",
+    "Gram Flour",
+    "Chilli",
+    "Onion"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "starters",
+   "name": "Chicken Spring Rolls",
+   "diet": "non-veg",
+   "price": 220,
+   "desc": "Crispy rolls stuffed with chicken and glass noodles",
+   "ingredients": [
+    "Chicken",
+    "Noodles",
+    "Cabbage",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Tomato Basil Soup",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Slow-roasted tomato soup with fresh basil",
+   "ingredients": [
+    "Tomato",
+    "Basil",
+    "Cream",
+    "Garlic"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Sweet Corn Veg Soup",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Classic creamy sweet-corn broth",
+   "ingredients": [
+    "Sweet Corn",
+    "Vegetables",
+    "Pepper"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Hot & Sour Veg Soup",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Tangy, peppery vegetable broth",
+   "ingredients": [
+    "Vegetables",
+    "Soy",
+    "Vinegar",
+    "Pepper"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Manchow Veg Soup",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Dark garlicky soup topped with fried noodles",
+   "ingredients": [
+    "Vegetables",
+    "Garlic",
+    "Soy",
+    "Fried Noodles"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Cream of Mushroom",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Silky mushroom velouté",
+   "ingredients": [
+    "Mushroom",
+    "Cream",
+    "Butter",
+    "Thyme"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Lemon Coriander Soup",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Light, zesty clear soup",
+   "ingredients": [
+    "Lemon",
+    "Coriander",
+    "Vegetable Broth"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Minestrone",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Italian vegetable and pasta soup",
+   "ingredients": [
+    "Vegetables",
+    "Pasta",
+    "Tomato",
+    "Herbs"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Hot & Sour Chicken Soup",
+   "diet": "non-veg",
+   "price": 170,
+   "desc": "Tangy, peppery chicken broth",
+   "ingredients": [
+    "Chicken",
+    "Soy",
+    "Vinegar",
+    "Pepper"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Sweet Corn Chicken Soup",
+   "diet": "non-veg",
+   "price": 170,
+   "desc": "Creamy corn broth with shredded chicken",
+   "ingredients": [
+    "Chicken",
+    "Sweet Corn",
+    "Egg White"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Manchow Chicken Soup",
+   "diet": "non-veg",
+   "price": 180,
+   "desc": "Garlicky chicken soup with fried noodles",
+   "ingredients": [
+    "Chicken",
+    "Garlic",
+    "Soy",
+    "Fried Noodles"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Chicken Clear Soup",
+   "diet": "non-veg",
+   "price": 160,
+   "desc": "Light ginger-scented chicken broth",
+   "ingredients": [
+    "Chicken",
+    "Ginger",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "soups",
+   "name": "Murgh Shorba",
+   "diet": "non-veg",
+   "price": 180,
+   "desc": "Spiced Indian chicken soup",
+   "ingredients": [
+    "Chicken",
+    "Onion",
+    "Tomato",
+    "Garam Masala"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Green Garden Salad",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Crisp seasonal greens with lemon vinaigrette",
+   "ingredients": [
+    "Lettuce",
+    "Cucumber",
+    "Tomato",
+    "Lemon Dressing"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Greek Salad",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Feta, olives, cucumber and oregano",
+   "ingredients": [
+    "Feta",
+    "Olives",
+    "Cucumber",
+    "Tomato",
+    "Oregano"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Caesar Salad Veg",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Romaine, parmesan and croutons in Caesar dressing",
+   "ingredients": [
+    "Romaine",
+    "Parmesan",
+    "Croutons",
+    "Caesar Dressing"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Corn & Bean Salad",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Sweet corn, kidney beans and peppers",
+   "ingredients": [
+    "Sweet Corn",
+    "Kidney Beans",
+    "Peppers",
+    "Lime"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Kachumber",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Indian chopped salad with lime and chaat masala",
+   "ingredients": [
+    "Cucumber",
+    "Onion",
+    "Tomato",
+    "Lime",
+    "Chaat Masala"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Fruit Chaat",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Seasonal fruit tossed with chaat spice",
+   "ingredients": [
+    "Seasonal Fruit",
+    "Chaat Masala",
+    "Lime"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Pasta Salad",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Cold penne with veggies in herb mayo",
+   "ingredients": [
+    "Penne",
+    "Vegetables",
+    "Herb Mayo"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Caesar Salad Chicken",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Classic Caesar with grilled chicken",
+   "ingredients": [
+    "Chicken",
+    "Romaine",
+    "Parmesan",
+    "Croutons"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Grilled Chicken Salad",
+   "diet": "non-veg",
+   "price": 290,
+   "desc": "Char-grilled chicken over greens",
+   "ingredients": [
+    "Chicken",
+    "Greens",
+    "Cherry Tomato",
+    "Vinaigrette"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "salads",
+   "name": "Egg Salad",
+   "diet": "non-veg",
+   "price": 190,
+   "desc": "Boiled eggs, greens and mustard mayo",
+   "ingredients": [
+    "Egg",
+    "Lettuce",
+    "Mustard Mayo"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Chicken (Half)",
+   "diet": "non-veg",
+   "price": 340,
+   "desc": "Classic char-grilled half chicken",
+   "ingredients": [
+    "Chicken",
+    "Yogurt",
+    "Red Chilli",
+    "Garam Masala"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Chicken (Full)",
+   "diet": "non-veg",
+   "price": 590,
+   "desc": "Whole tandoori chicken off the coals",
+   "ingredients": [
+    "Chicken",
+    "Yogurt",
+    "Red Chilli",
+    "Garam Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Chicken Tikka",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "Smoky boneless chicken tikka",
+   "ingredients": [
+    "Chicken",
+    "Yogurt",
+    "Kashmiri Chilli",
+    "Lemon"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Malai Chicken Tikka",
+   "diet": "non-veg",
+   "price": 340,
+   "desc": "Creamy, mild cheese-marinated tikka",
+   "ingredients": [
+    "Chicken",
+    "Cream",
+    "Cheese",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Chicken Seekh Kebab",
+   "diet": "non-veg",
+   "price": 330,
+   "desc": "Minced chicken kebabs off the skewer",
+   "ingredients": [
+    "Chicken Mince",
+    "Onion",
+    "Coriander",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Mutton Seekh Kebab",
+   "diet": "non-veg",
+   "price": 420,
+   "desc": "Juicy minced mutton skewers",
+   "ingredients": [
+    "Mutton Mince",
+    "Onion",
+    "Ginger",
+    "Garam Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tangdi Kebab",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "Marinated chicken drumsticks, char-finished",
+   "ingredients": [
+    "Chicken Drumsticks",
+    "Yogurt",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Fish Tikka",
+   "diet": "non-veg",
+   "price": 390,
+   "desc": "Riverside-style spiced fish tikka",
+   "ingredients": [
+    "Fish",
+    "Yogurt",
+    "Carom",
+    "Mustard Oil"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Prawns",
+   "diet": "non-veg",
+   "price": 460,
+   "desc": "Jumbo prawns kissed by the tandoor",
+   "ingredients": [
+    "Prawns",
+    "Yogurt",
+    "Chilli",
+    "Lime"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Paneer Tikka Shashlik",
+   "diet": "veg",
+   "price": 290,
+   "desc": "Paneer skewers with charred peppers and pineapple",
+   "ingredients": [
+    "Paneer",
+    "Peppers",
+    "Pineapple",
+    "Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Malai Paneer Tikka",
+   "diet": "veg",
+   "price": 290,
+   "desc": "Creamy cardamom-scented paneer tikka",
+   "ingredients": [
+    "Paneer",
+    "Cream",
+    "Cheese",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Mushroom",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Whole mushrooms in smoky tandoori masala",
+   "ingredients": [
+    "Mushroom",
+    "Yogurt",
+    "Tandoori Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Broccoli",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Char-grilled broccoli in malai marinade",
+   "ingredients": [
+    "Broccoli",
+    "Cream",
+    "Cheese",
+    "Pepper"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Soya Chaap Tikka",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Smoky soya chaap on the skewer",
+   "ingredients": [
+    "Soya Chaap",
+    "Yogurt",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Veg Seekh Kebab",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Minced vegetable kebabs off the skewer",
+   "ingredients": [
+    "Mixed Vegetables",
+    "Potato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Platter Veg",
+   "diet": "veg",
+   "price": 520,
+   "desc": "Paneer tikka, mushroom, chaap and veg seekh",
+   "ingredients": [
+    "Paneer",
+    "Mushroom",
+    "Soya Chaap",
+    "Veg Seekh"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Tandoori Platter Non-Veg",
+   "diet": "non-veg",
+   "price": 690,
+   "desc": "Chicken tikka, seekh, tangdi and fish tikka",
+   "ingredients": [
+    "Chicken",
+    "Mutton Seekh",
+    "Fish",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "tandoor-kebabs",
+   "name": "Afghani Chaap",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Creamy white-marinated soya chaap",
+   "ingredients": [
+    "Soya Chaap",
+    "Cream",
+    "Cashew",
+    "Pepper"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Paneer Butter Masala",
+   "diet": "veg",
+   "price": 300,
+   "desc": "Paneer in silky tomato-butter gravy",
+   "ingredients": [
+    "Paneer",
+    "Tomato",
+    "Butter",
+    "Cream",
+    "Fenugreek"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Kadai Paneer",
+   "diet": "veg",
+   "price": 300,
+   "desc": "Paneer with peppers in coarse kadai masala",
+   "ingredients": [
+    "Paneer",
+    "Capsicum",
+    "Onion",
+    "Kadai Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Palak Paneer",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Paneer simmered in garlicky spinach",
+   "ingredients": [
+    "Paneer",
+    "Spinach",
+    "Garlic",
+    "Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Shahi Paneer",
+   "diet": "veg",
+   "price": 310,
+   "desc": "Royal cashew-cream paneer gravy",
+   "ingredients": [
+    "Paneer",
+    "Cashew",
+    "Cream",
+    "Saffron"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Matar Paneer",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Homestyle peas and paneer curry",
+   "ingredients": [
+    "Paneer",
+    "Green Peas",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Malai Kofta",
+   "diet": "veg",
+   "price": 310,
+   "desc": "Fried paneer-potato dumplings in creamy gravy",
+   "ingredients": [
+    "Paneer",
+    "Potato",
+    "Cashew",
+    "Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Veg Kolhapuri",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Fiery mixed-vegetable Kolhapuri",
+   "ingredients": [
+    "Mixed Vegetables",
+    "Kolhapuri Masala",
+    "Coconut"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Veg Jalfrezi",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Stir-fried vegetables in tangy tomato masala",
+   "ingredients": [
+    "Mixed Vegetables",
+    "Tomato",
+    "Capsicum"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Aloo Gobi",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Homestyle potato and cauliflower",
+   "ingredients": [
+    "Potato",
+    "Cauliflower",
+    "Turmeric",
+    "Cumin"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Bhindi Masala",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Crisp okra tossed in onion masala",
+   "ingredients": [
+    "Okra",
+    "Onion",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Chana Masala",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Punjabi chickpea curry",
+   "ingredients": [
+    "Chickpeas",
+    "Onion",
+    "Tomato",
+    "Chana Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Rajma",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Slow-cooked kidney beans in tomato gravy",
+   "ingredients": [
+    "Kidney Beans",
+    "Tomato",
+    "Onion",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Dal Tadka",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Yellow dal finished with ghee tempering",
+   "ingredients": [
+    "Toor Dal",
+    "Ghee",
+    "Garlic",
+    "Cumin"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Kaju Curry",
+   "diet": "veg",
+   "price": 340,
+   "desc": "Cashews in rich creamy gravy",
+   "ingredients": [
+    "Cashew",
+    "Cream",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Mushroom Masala",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Button mushrooms in onion-tomato masala",
+   "ingredients": [
+    "Mushroom",
+    "Onion",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Soya Chaap Masala",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Chaap simmered in punchy masala gravy",
+   "ingredients": [
+    "Soya Chaap",
+    "Onion",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Chicken Tikka Masala",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "Char-grilled tikka in spiced tomato gravy",
+   "ingredients": [
+    "Chicken Tikka",
+    "Tomato",
+    "Cream",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Kadai Chicken",
+   "diet": "non-veg",
+   "price": 350,
+   "desc": "Chicken with peppers in coarse kadai masala",
+   "ingredients": [
+    "Chicken",
+    "Capsicum",
+    "Onion",
+    "Kadai Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Chicken Curry Homestyle",
+   "diet": "non-veg",
+   "price": 330,
+   "desc": "The Sunday-house chicken curry",
+   "ingredients": [
+    "Chicken",
+    "Onion",
+    "Tomato",
+    "Whole Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Chicken Korma",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "Mild, nutty Mughlai chicken korma",
+   "ingredients": [
+    "Chicken",
+    "Cashew",
+    "Cream",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Chicken Rara",
+   "diet": "non-veg",
+   "price": 380,
+   "desc": "Chicken curry enriched with keema",
+   "ingredients": [
+    "Chicken",
+    "Chicken Mince",
+    "Onion",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Mutton Rogan Josh",
+   "diet": "non-veg",
+   "price": 450,
+   "desc": "Kashmiri slow-braised mutton",
+   "ingredients": [
+    "Mutton",
+    "Kashmiri Chilli",
+    "Yogurt",
+    "Fennel"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Mutton Curry",
+   "diet": "non-veg",
+   "price": 430,
+   "desc": "Homestyle mutton in onion-tomato gravy",
+   "ingredients": [
+    "Mutton",
+    "Onion",
+    "Tomato",
+    "Whole Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Egg Curry",
+   "diet": "non-veg",
+   "price": 240,
+   "desc": "Boiled eggs in spiced onion gravy",
+   "ingredients": [
+    "Egg",
+    "Onion",
+    "Tomato",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Prawn Masala",
+   "diet": "non-veg",
+   "price": 440,
+   "desc": "Prawns in coastal-style masala",
+   "ingredients": [
+    "Prawns",
+    "Onion",
+    "Tomato",
+    "Coconut"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "main-course",
+   "name": "Butter Chicken Boneless",
+   "diet": "non-veg",
+   "price": 380,
+   "desc": "Our signature makhani, all-boneless cut",
+   "ingredients": [
+    "Chicken",
+    "Tomato",
+    "Butter",
+    "Cream",
+    "Fenugreek"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Veg Dum Biryani",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Layered vegetable biryani, dum-cooked 90 minutes",
+   "ingredients": [
+    "Basmati",
+    "Mixed Vegetables",
+    "Saffron",
+    "Biryani Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Paneer Tikka Biryani",
+   "diet": "veg",
+   "price": 320,
+   "desc": "Smoky paneer tikka layered with saffron rice",
+   "ingredients": [
+    "Basmati",
+    "Paneer Tikka",
+    "Saffron",
+    "Mint"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Hyderabadi Chicken Biryani",
+   "diet": "non-veg",
+   "price": 360,
+   "desc": "The classic dum biryani with raita",
+   "ingredients": [
+    "Basmati",
+    "Chicken",
+    "Saffron",
+    "Fried Onion"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Chicken Tikka Biryani",
+   "diet": "non-veg",
+   "price": 380,
+   "desc": "Char-grilled tikka layered in dum rice",
+   "ingredients": [
+    "Basmati",
+    "Chicken Tikka",
+    "Saffron",
+    "Mint"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Mutton Biryani",
+   "diet": "non-veg",
+   "price": 450,
+   "desc": "Slow dum mutton biryani",
+   "ingredients": [
+    "Basmati",
+    "Mutton",
+    "Saffron",
+    "Biryani Masala"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Egg Biryani",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Dum biryani with masala-tossed eggs",
+   "ingredients": [
+    "Basmati",
+    "Egg",
+    "Saffron",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Prawn Biryani",
+   "diet": "non-veg",
+   "price": 440,
+   "desc": "Coastal prawn biryani",
+   "ingredients": [
+    "Basmati",
+    "Prawns",
+    "Saffron",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Jeera Rice",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Basmati tossed with ghee-roasted cumin",
+   "ingredients": [
+    "Basmati",
+    "Cumin",
+    "Ghee"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Steamed Rice",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Plain steamed basmati",
+   "ingredients": [
+    "Basmati"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Veg Pulao",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Fragrant vegetable pulao",
+   "ingredients": [
+    "Basmati",
+    "Vegetables",
+    "Whole Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Kashmiri Pulao",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Sweet saffron pulao with fruit and nuts",
+   "ingredients": [
+    "Basmati",
+    "Saffron",
+    "Dry Fruits"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Curd Rice",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Cooling tempered curd rice",
+   "ingredients": [
+    "Rice",
+    "Curd",
+    "Mustard Seeds",
+    "Curry Leaves"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Dal Khichdi",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Comforting dal-rice khichdi with ghee",
+   "ingredients": [
+    "Rice",
+    "Moong Dal",
+    "Ghee",
+    "Cumin"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Chicken Fried Rice (Desi)",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Wok rice with chicken and desi tadka",
+   "ingredients": [
+    "Rice",
+    "Chicken",
+    "Onion",
+    "Spices"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Ghee Rice",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Basmati in whole-spice ghee",
+   "ingredients": [
+    "Basmati",
+    "Ghee",
+    "Whole Spices"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "biryani-rice",
+   "name": "Lemon Rice",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Tangy South-style lemon rice",
+   "ingredients": [
+    "Rice",
+    "Lemon",
+    "Peanuts",
+    "Curry Leaves"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Tandoori Roti",
+   "diet": "veg",
+   "price": 35,
+   "desc": "Whole-wheat roti off the tandoor",
+   "ingredients": [
+    "Wheat Flour"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Butter Roti",
+   "diet": "veg",
+   "price": 45,
+   "desc": "Tandoori roti brushed with butter",
+   "ingredients": [
+    "Wheat Flour",
+    "Butter"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Plain Naan",
+   "diet": "veg",
+   "price": 55,
+   "desc": "Classic leavened naan",
+   "ingredients": [
+    "Refined Flour",
+    "Yogurt"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Butter Naan",
+   "diet": "veg",
+   "price": 65,
+   "desc": "Naan brushed with melting butter",
+   "ingredients": [
+    "Refined Flour",
+    "Butter"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Garlic Naan",
+   "diet": "veg",
+   "price": 80,
+   "desc": "Naan crusted with garlic and coriander",
+   "ingredients": [
+    "Refined Flour",
+    "Garlic",
+    "Coriander"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Cheese Naan",
+   "diet": "veg",
+   "price": 110,
+   "desc": "Naan stuffed with molten cheese",
+   "ingredients": [
+    "Refined Flour",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Cheese Garlic Naan",
+   "diet": "veg",
+   "price": 130,
+   "desc": "Garlic naan with a cheese heart",
+   "ingredients": [
+    "Refined Flour",
+    "Cheese",
+    "Garlic"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Laccha Paratha",
+   "diet": "veg",
+   "price": 70,
+   "desc": "Flaky layered whole-wheat paratha",
+   "ingredients": [
+    "Wheat Flour",
+    "Ghee"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Pudina Paratha",
+   "diet": "veg",
+   "price": 80,
+   "desc": "Mint-dusted laccha paratha",
+   "ingredients": [
+    "Wheat Flour",
+    "Mint",
+    "Ghee"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Aloo Paratha",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Spiced-potato stuffed paratha with curd",
+   "ingredients": [
+    "Wheat Flour",
+    "Potato",
+    "Curd",
+    "Butter"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Paneer Paratha",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Paneer-stuffed paratha with butter",
+   "ingredients": [
+    "Wheat Flour",
+    "Paneer",
+    "Butter"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Missi Roti",
+   "diet": "veg",
+   "price": 60,
+   "desc": "Gram-flour roti with ajwain",
+   "ingredients": [
+    "Gram Flour",
+    "Wheat Flour",
+    "Ajwain"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Roomali Roti",
+   "diet": "veg",
+   "price": 50,
+   "desc": "Paper-thin handkerchief roti",
+   "ingredients": [
+    "Refined Flour"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "breads",
+   "name": "Kulcha Amritsari",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Stuffed Amritsari kulcha with chole",
+   "ingredients": [
+    "Refined Flour",
+    "Potato",
+    "Chole"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Veg Hakka Noodles",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Wok-tossed noodles with crunchy vegetables",
+   "ingredients": [
+    "Noodles",
+    "Cabbage",
+    "Carrot",
+    "Soy"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Veg Schezwan Noodles",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Fiery schezwan noodles",
+   "ingredients": [
+    "Noodles",
+    "Schezwan Sauce",
+    "Vegetables"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chicken Hakka Noodles",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Hakka noodles with shredded chicken",
+   "ingredients": [
+    "Noodles",
+    "Chicken",
+    "Vegetables",
+    "Soy"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chicken Schezwan Noodles",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Fiery schezwan chicken noodles",
+   "ingredients": [
+    "Noodles",
+    "Chicken",
+    "Schezwan Sauce"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Veg Fried Rice",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Classic wok-fried rice",
+   "ingredients": [
+    "Rice",
+    "Vegetables",
+    "Soy",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Schezwan Fried Rice",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Chilli-garlic fried rice",
+   "ingredients": [
+    "Rice",
+    "Schezwan Sauce",
+    "Vegetables"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chicken Fried Rice",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Wok rice with egg and chicken",
+   "ingredients": [
+    "Rice",
+    "Chicken",
+    "Egg",
+    "Soy"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Triple Schezwan Rice",
+   "diet": "veg",
+   "price": 320,
+   "desc": "Rice, noodles and gravy — the full triple",
+   "ingredients": [
+    "Rice",
+    "Noodles",
+    "Schezwan Gravy",
+    "Vegetables"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Veg Manchurian Gravy",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Vegetable dumplings in soy-garlic gravy",
+   "ingredients": [
+    "Vegetable Balls",
+    "Garlic",
+    "Soy Gravy"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chicken Manchurian",
+   "diet": "non-veg",
+   "price": 290,
+   "desc": "Chicken dumplings in classic Manchurian gravy",
+   "ingredients": [
+    "Chicken",
+    "Garlic",
+    "Soy Gravy"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chilli Paneer Gravy",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Chilli paneer in glossy gravy",
+   "ingredients": [
+    "Paneer",
+    "Capsicum",
+    "Chilli Gravy"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chilli Chicken Gravy",
+   "diet": "non-veg",
+   "price": 310,
+   "desc": "Chilli chicken in glossy gravy",
+   "ingredients": [
+    "Chicken",
+    "Capsicum",
+    "Chilli Gravy"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chilli Garlic Noodles",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Burnt-garlic chilli noodles",
+   "ingredients": [
+    "Noodles",
+    "Garlic",
+    "Chilli Oil"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chilli Mushroom",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Crisp mushrooms in chilli toss",
+   "ingredients": [
+    "Mushroom",
+    "Capsicum",
+    "Chilli Sauce"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Paneer Fried Rice",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Fried rice studded with paneer",
+   "ingredients": [
+    "Rice",
+    "Paneer",
+    "Vegetables"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Egg Fried Rice",
+   "diet": "non-veg",
+   "price": 230,
+   "desc": "Wok rice with scrambled egg",
+   "ingredients": [
+    "Rice",
+    "Egg",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "American Chopsuey",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Crispy noodles under sweet-tangy sauce",
+   "ingredients": [
+    "Fried Noodles",
+    "Vegetables",
+    "Tomato Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Chicken Chopsuey",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "Crispy noodles with chicken chopsuey",
+   "ingredients": [
+    "Fried Noodles",
+    "Chicken",
+    "Tomato Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Honey Chilli Cauliflower",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Crispy gobi in honey-chilli glaze",
+   "ingredients": [
+    "Cauliflower",
+    "Honey",
+    "Chilli",
+    "Sesame"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "indo-chinese",
+   "name": "Burnt Garlic Fried Rice",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Smoky burnt-garlic rice",
+   "ingredients": [
+    "Rice",
+    "Burnt Garlic",
+    "Spring Onion"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Corn & Cheese Pizza",
+   "diet": "veg",
+   "price": 329,
+   "desc": "Sweet corn under a blanket of mozzarella",
+   "ingredients": [
+    "Sweet Corn",
+    "Mozzarella",
+    "Tomato Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Paneer Tikka Pizza",
+   "diet": "veg",
+   "price": 399,
+   "desc": "Smoky paneer tikka with onion and capsicum",
+   "ingredients": [
+    "Paneer Tikka",
+    "Onion",
+    "Capsicum",
+    "Mozzarella"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Veggie Supreme Pizza",
+   "diet": "veg",
+   "price": 419,
+   "desc": "Loaded garden vegetables and olives",
+   "ingredients": [
+    "Peppers",
+    "Olives",
+    "Onion",
+    "Mushroom",
+    "Corn"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Mushroom Truffle Pizza",
+   "diet": "veg",
+   "price": 449,
+   "desc": "Wood-fired mushroom with truffle oil",
+   "ingredients": [
+    "Mushroom",
+    "Truffle Oil",
+    "Mozzarella",
+    "Thyme"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Peri Peri Paneer Pizza",
+   "diet": "veg",
+   "price": 419,
+   "desc": "Peri-peri paneer with jalapeños",
+   "ingredients": [
+    "Paneer",
+    "Peri Peri",
+    "Jalapeños",
+    "Mozzarella"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Quattro Formaggi",
+   "diet": "veg",
+   "price": 479,
+   "desc": "Four-cheese wood-fired classic",
+   "ingredients": [
+    "Mozzarella",
+    "Cheddar",
+    "Parmesan",
+    "Blue Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Basil Pesto Pizza",
+   "diet": "veg",
+   "price": 429,
+   "desc": "Fresh pesto base with cherry tomatoes",
+   "ingredients": [
+    "Basil Pesto",
+    "Cherry Tomato",
+    "Mozzarella"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "BBQ Chicken Pizza",
+   "diet": "non-veg",
+   "price": 459,
+   "desc": "Smoky BBQ chicken with onions",
+   "ingredients": [
+    "BBQ Chicken",
+    "Onion",
+    "Mozzarella"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Chicken Sausage Pizza",
+   "diet": "non-veg",
+   "price": 439,
+   "desc": "Chicken sausage with peppers",
+   "ingredients": [
+    "Chicken Sausage",
+    "Peppers",
+    "Mozzarella"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Butter Chicken Pizza",
+   "diet": "non-veg",
+   "price": 469,
+   "desc": "Our makhani, on a wood-fired crust",
+   "ingredients": [
+    "Butter Chicken",
+    "Onion",
+    "Coriander",
+    "Mozzarella"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Keema Pizza",
+   "diet": "non-veg",
+   "price": 479,
+   "desc": "Spiced mutton keema with onions",
+   "ingredients": [
+    "Mutton Keema",
+    "Onion",
+    "Chilli",
+    "Mozzarella"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Peri Peri Chicken Pizza",
+   "diet": "non-veg",
+   "price": 459,
+   "desc": "Fiery peri-peri chicken",
+   "ingredients": [
+    "Peri Peri Chicken",
+    "Jalapeños",
+    "Mozzarella"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Margherita Burrata",
+   "diet": "veg",
+   "price": 499,
+   "desc": "Margherita crowned with fresh burrata",
+   "ingredients": [
+    "Burrata",
+    "Tomato",
+    "Basil"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pizza",
+   "name": "Garlic Cheese Pizza Bread",
+   "diet": "veg",
+   "price": 259,
+   "desc": "Wood-fired cheesy garlic flatbread",
+   "ingredients": [
+    "Garlic Butter",
+    "Mozzarella",
+    "Herbs"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Crispy Paneer Burger",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Crumb-fried paneer with mint mayo",
+   "ingredients": [
+    "Paneer",
+    "Mint Mayo",
+    "Lettuce",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Aloo Tikki Burger",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Spiced potato tikki with tangy sauces",
+   "ingredients": [
+    "Potato Tikki",
+    "Onion",
+    "Sauces",
+    "Bun"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Mushroom Swiss Burger",
+   "diet": "veg",
+   "price": 290,
+   "desc": "Sautéed mushrooms with melted cheese",
+   "ingredients": [
+    "Mushroom",
+    "Cheese",
+    "Caramelised Onion",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Peri Peri Veg Burger",
+   "diet": "veg",
+   "price": 250,
+   "desc": "Peri-peri veg patty with jalapeños",
+   "ingredients": [
+    "Veg Patty",
+    "Peri Peri",
+    "Jalapeños",
+    "Bun"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Cheesy Corn Burger",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Corn-cheese patty with garlic mayo",
+   "ingredients": [
+    "Corn",
+    "Cheese",
+    "Garlic Mayo",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Fried Chicken Burger",
+   "diet": "non-veg",
+   "price": 300,
+   "desc": "Crunchy fried chicken thigh with slaw",
+   "ingredients": [
+    "Fried Chicken",
+    "Slaw",
+    "Mayo",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Peri Peri Chicken Burger",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "Flame-grilled peri-peri chicken",
+   "ingredients": [
+    "Chicken",
+    "Peri Peri",
+    "Lettuce",
+    "Bun"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "BBQ Chicken Burger",
+   "diet": "non-veg",
+   "price": 320,
+   "desc": "BBQ-glazed chicken with onion rings",
+   "ingredients": [
+    "Chicken",
+    "BBQ Sauce",
+    "Onion Rings",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Egg Burger",
+   "diet": "non-veg",
+   "price": 180,
+   "desc": "Fried-egg burger with cheese",
+   "ingredients": [
+    "Egg",
+    "Cheese",
+    "Lettuce",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "burgers",
+   "name": "Double Chicken Stack",
+   "diet": "non-veg",
+   "price": 420,
+   "desc": "Two chicken patties, double cheese",
+   "ingredients": [
+    "Chicken x2",
+    "Cheese x2",
+    "Sauces",
+    "Bun"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Mac & Cheese",
+   "diet": "veg",
+   "price": 290,
+   "desc": "Baked macaroni in triple-cheese sauce",
+   "ingredients": [
+    "Macaroni",
+    "Cheddar",
+    "Mozzarella",
+    "Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Rosé Pasta (Pink Sauce)",
+   "diet": "veg",
+   "price": 300,
+   "desc": "Penne in creamy tomato rosé",
+   "ingredients": [
+    "Penne",
+    "Tomato",
+    "Cream",
+    "Parmesan"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Aglio e Olio",
+   "diet": "veg",
+   "price": 270,
+   "desc": "Garlic, olive oil and chilli flakes",
+   "ingredients": [
+    "Spaghetti",
+    "Garlic",
+    "Olive Oil",
+    "Chilli Flakes"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Mushroom Alfredo",
+   "diet": "veg",
+   "price": 310,
+   "desc": "Creamy alfredo loaded with mushrooms",
+   "ingredients": [
+    "Fettuccine",
+    "Mushroom",
+    "Cream",
+    "Parmesan"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Baked Veg Lasagna",
+   "diet": "veg",
+   "price": 360,
+   "desc": "Layered vegetable lasagna, oven-baked",
+   "ingredients": [
+    "Lasagna Sheets",
+    "Vegetables",
+    "Bechamel",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Chicken Alfredo",
+   "diet": "non-veg",
+   "price": 350,
+   "desc": "Alfredo with grilled chicken",
+   "ingredients": [
+    "Fettuccine",
+    "Chicken",
+    "Cream",
+    "Parmesan"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Chicken Arrabbiata",
+   "diet": "non-veg",
+   "price": 330,
+   "desc": "Spicy tomato pasta with chicken",
+   "ingredients": [
+    "Penne",
+    "Chicken",
+    "Arrabbiata Sauce"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Chicken Lasagna",
+   "diet": "non-veg",
+   "price": 420,
+   "desc": "Classic baked chicken lasagna",
+   "ingredients": [
+    "Lasagna Sheets",
+    "Chicken",
+    "Bechamel",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Spaghetti & Meatballs",
+   "diet": "non-veg",
+   "price": 390,
+   "desc": "Chicken meatballs in marinara",
+   "ingredients": [
+    "Spaghetti",
+    "Chicken Meatballs",
+    "Marinara"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "pasta",
+   "name": "Prawn Aglio e Olio",
+   "diet": "non-veg",
+   "price": 420,
+   "desc": "Garlic-oil spaghetti with prawns",
+   "ingredients": [
+    "Spaghetti",
+    "Prawns",
+    "Garlic",
+    "Chilli Flakes"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Veg Club Sandwich",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Triple-decker with veggies and cheese",
+   "ingredients": [
+    "Bread",
+    "Vegetables",
+    "Cheese",
+    "Mayo"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Grilled Cheese Sandwich",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Buttery grilled three-cheese melt",
+   "ingredients": [
+    "Bread",
+    "Cheddar",
+    "Mozzarella",
+    "Butter"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Bombay Masala Toast",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Street-style potato masala toast",
+   "ingredients": [
+    "Bread",
+    "Potato Masala",
+    "Green Chutney"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Paneer Tikka Sandwich",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Smoky paneer tikka grilled sandwich",
+   "ingredients": [
+    "Bread",
+    "Paneer Tikka",
+    "Onion",
+    "Mint Mayo"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Corn Spinach Sandwich",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Creamed corn and spinach melt",
+   "ingredients": [
+    "Bread",
+    "Corn",
+    "Spinach",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Chicken Club Sandwich",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Triple-decker chicken, egg and cheese",
+   "ingredients": [
+    "Bread",
+    "Chicken",
+    "Egg",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Grilled Chicken Sandwich",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Char-grilled chicken with herb mayo",
+   "ingredients": [
+    "Bread",
+    "Chicken",
+    "Herb Mayo",
+    "Lettuce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Egg Cheese Sandwich",
+   "diet": "non-veg",
+   "price": 180,
+   "desc": "Fluffy egg and cheese grill",
+   "ingredients": [
+    "Bread",
+    "Egg",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Paneer Kathi Roll",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Paneer tikka rolled in laccha paratha",
+   "ingredients": [
+    "Paratha",
+    "Paneer Tikka",
+    "Onion",
+    "Chutney"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Chicken Kathi Roll",
+   "diet": "non-veg",
+   "price": 260,
+   "desc": "Chicken tikka kathi roll",
+   "ingredients": [
+    "Paratha",
+    "Chicken Tikka",
+    "Onion",
+    "Chutney"
+   ],
+   "spicy": true,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Egg Roll",
+   "diet": "non-veg",
+   "price": 180,
+   "desc": "Kolkata-style egg roll",
+   "ingredients": [
+    "Paratha",
+    "Egg",
+    "Onion",
+    "Sauce"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Falafel Wrap",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Falafel with hummus and pickled veg",
+   "ingredients": [
+    "Tortilla",
+    "Falafel",
+    "Hummus",
+    "Pickles"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Peri Peri Chicken Wrap",
+   "diet": "non-veg",
+   "price": 280,
+   "desc": "Fiery peri-peri chicken wrap",
+   "ingredients": [
+    "Tortilla",
+    "Chicken",
+    "Peri Peri",
+    "Slaw"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "sandwiches-wraps",
+   "name": "Schezwan Paneer Wrap",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Chilli-garlic paneer wrap",
+   "ingredients": [
+    "Tortilla",
+    "Paneer",
+    "Schezwan",
+    "Onion"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Plain Dosa",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Crisp golden rice-lentil crepe",
+   "ingredients": [
+    "Rice Batter",
+    "Urad Dal"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Masala Dosa",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Dosa with spiced potato filling",
+   "ingredients": [
+    "Rice Batter",
+    "Potato Masala",
+    "Chutney",
+    "Sambar"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Mysore Masala Dosa",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Red-chutney smeared masala dosa",
+   "ingredients": [
+    "Rice Batter",
+    "Mysore Chutney",
+    "Potato"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Cheese Dosa",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Dosa layered with molten cheese",
+   "ingredients": [
+    "Rice Batter",
+    "Cheese"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Rava Dosa",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Lacy crisp semolina dosa",
+   "ingredients": [
+    "Semolina",
+    "Onion",
+    "Green Chilli"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Idli Sambar (2 pc)",
+   "diet": "veg",
+   "price": 110,
+   "desc": "Steamed idlis with sambar and chutney",
+   "ingredients": [
+    "Idli",
+    "Sambar",
+    "Coconut Chutney"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Medu Vada (2 pc)",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Crisp lentil doughnuts with sambar",
+   "ingredients": [
+    "Urad Dal",
+    "Curry Leaves",
+    "Sambar"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Uttapam Onion",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Thick onion-topped uttapam",
+   "ingredients": [
+    "Rice Batter",
+    "Onion",
+    "Chilli"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Uttapam Mixed Veg",
+   "diet": "veg",
+   "price": 170,
+   "desc": "Uttapam loaded with vegetables",
+   "ingredients": [
+    "Rice Batter",
+    "Vegetables"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Upma",
+   "diet": "veg",
+   "price": 110,
+   "desc": "Soft semolina upma with cashews",
+   "ingredients": [
+    "Semolina",
+    "Cashew",
+    "Curry Leaves"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Pongal",
+   "diet": "veg",
+   "price": 130,
+   "desc": "Comforting ghee pongal with pepper",
+   "ingredients": [
+    "Rice",
+    "Moong Dal",
+    "Ghee",
+    "Pepper"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "south-indian",
+   "name": "Paneer Dosa",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Dosa stuffed with spiced paneer",
+   "ingredients": [
+    "Rice Batter",
+    "Paneer Bhurji"
+   ],
+   "spicy": true,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Fresh Lime Soda",
+   "diet": "veg",
+   "price": 90,
+   "desc": "Sweet, salted or mixed — your call",
+   "ingredients": [
+    "Lime",
+    "Soda",
+    "Sugar/Salt"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Masala Chaas",
+   "diet": "veg",
+   "price": 90,
+   "desc": "Spiced buttermilk with roasted cumin",
+   "ingredients": [
+    "Buttermilk",
+    "Cumin",
+    "Coriander"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Sweet Lassi",
+   "diet": "veg",
+   "price": 130,
+   "desc": "Thick Punjabi sweet lassi",
+   "ingredients": [
+    "Curd",
+    "Sugar",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Salted Lassi",
+   "diet": "veg",
+   "price": 120,
+   "desc": "Lightly salted churned lassi",
+   "ingredients": [
+    "Curd",
+    "Salt",
+    "Cumin"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Watermelon Cooler",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Fresh watermelon with mint",
+   "ingredients": [
+    "Watermelon",
+    "Mint",
+    "Lime"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Blue Lagoon",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Blue curaçao citrus fizz",
+   "ingredients": [
+    "Blue Curaçao Syrup",
+    "Lime",
+    "Soda"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Green Apple Fizz",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Crisp green-apple soda",
+   "ingredients": [
+    "Green Apple Syrup",
+    "Lime",
+    "Soda"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Mojito Classic",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Mint-lime mojito, the classic virgin",
+   "ingredients": [
+    "Mint",
+    "Lime",
+    "Soda",
+    "Sugar"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Strawberry Mojito",
+   "diet": "veg",
+   "price": 170,
+   "desc": "Strawberry twist on the mojito",
+   "ingredients": [
+    "Strawberry",
+    "Mint",
+    "Lime",
+    "Soda"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Iced Tea Lemon",
+   "diet": "veg",
+   "price": 130,
+   "desc": "House-brewed lemon iced tea",
+   "ingredients": [
+    "Black Tea",
+    "Lemon",
+    "Sugar"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Iced Tea Peach",
+   "diet": "veg",
+   "price": 140,
+   "desc": "Peach iced tea over ice",
+   "ingredients": [
+    "Black Tea",
+    "Peach",
+    "Sugar"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Cold Brew Coffee",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Slow-steeped 18-hour cold brew",
+   "ingredients": [
+    "Arabica Coffee",
+    "Water"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Espresso",
+   "diet": "veg",
+   "price": 110,
+   "desc": "Double-shot espresso",
+   "ingredients": [
+    "Arabica Coffee"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Cappuccino",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Classic foamy cappuccino",
+   "ingredients": [
+    "Espresso",
+    "Steamed Milk",
+    "Foam"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Hot Chocolate",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Belgian-style hot chocolate",
+   "ingredients": [
+    "Chocolate",
+    "Milk",
+    "Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "drinks",
+   "name": "Masala Chai",
+   "diet": "veg",
+   "price": 80,
+   "desc": "Kadak spiced chai",
+   "ingredients": [
+    "Tea",
+    "Milk",
+    "Ginger",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Oreo Shake",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Cookies-and-cream thick shake",
+   "ingredients": [
+    "Oreo",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "KitKat Shake",
+   "diet": "veg",
+   "price": 210,
+   "desc": "Crunchy KitKat blended thick",
+   "ingredients": [
+    "KitKat",
+    "Ice Cream",
+    "Milk",
+    "Chocolate"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Brownie Shake",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Fudgy brownie blended shake",
+   "ingredients": [
+    "Brownie",
+    "Ice Cream",
+    "Milk",
+    "Chocolate"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Strawberry Shake",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Fresh strawberry thick shake",
+   "ingredients": [
+    "Strawberry",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Mango Shake",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Alphonso mango shake (seasonal)",
+   "ingredients": [
+    "Mango",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Cold Coffee Crush",
+   "diet": "veg",
+   "price": 170,
+   "desc": "Frappe-style blended cold coffee",
+   "ingredients": [
+    "Coffee",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Nutella Shake",
+   "diet": "veg",
+   "price": 230,
+   "desc": "Hazelnut-chocolate indulgence",
+   "ingredients": [
+    "Nutella",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Butterscotch Shake",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Crunchy butterscotch shake",
+   "ingredients": [
+    "Butterscotch",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Blueberry Shake",
+   "diet": "veg",
+   "price": 210,
+   "desc": "Blueberry compote thick shake",
+   "ingredients": [
+    "Blueberry",
+    "Ice Cream",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Banana Peanut Shake",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Banana and peanut-butter protein hit",
+   "ingredients": [
+    "Banana",
+    "Peanut Butter",
+    "Milk"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Rose Falooda",
+   "diet": "veg",
+   "price": 220,
+   "desc": "Rose milk with vermicelli, basil seeds & ice cream",
+   "ingredients": [
+    "Rose Syrup",
+    "Vermicelli",
+    "Basil Seeds",
+    "Ice Cream"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "shakes",
+   "name": "Thandai (Seasonal)",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Chilled spiced-nut milk classic",
+   "ingredients": [
+    "Milk",
+    "Almond",
+    "Fennel",
+    "Saffron"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Gajar Ka Halwa",
+   "diet": "veg",
+   "price": 180,
+   "desc": "Slow-cooked carrot halwa with ghee and nuts",
+   "ingredients": [
+    "Carrot",
+    "Milk",
+    "Ghee",
+    "Dry Fruits"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1546039907-7fa05f864c02?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Rasmalai (2 pc)",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Soft rasmalai in saffron milk",
+   "ingredients": [
+    "Chhena",
+    "Milk",
+    "Saffron",
+    "Cardamom"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1527477396000-e27163b481c2?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Moong Dal Halwa",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Rich, slow-roasted moong dal halwa",
+   "ingredients": [
+    "Moong Dal",
+    "Ghee",
+    "Sugar",
+    "Nuts"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1552566626-52f8b828add9?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Sizzling Brownie",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Brownie on a sizzler with ice cream and chocolate",
+   "ingredients": [
+    "Brownie",
+    "Ice Cream",
+    "Chocolate Sauce"
+   ],
+   "spicy": false,
+   "popular": true,
+   "img": "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Tiramisu",
+   "diet": "veg",
+   "price": 280,
+   "desc": "Coffee-soaked mascarpone classic",
+   "ingredients": [
+    "Mascarpone",
+    "Coffee",
+    "Ladyfingers",
+    "Cocoa"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Choco Lava Cake",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Molten-centre chocolate cake",
+   "ingredients": [
+    "Chocolate",
+    "Butter",
+    "Flour",
+    "Egg-free"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1577219491135-ce391730fb2c?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "New York Cheesecake",
+   "diet": "veg",
+   "price": 260,
+   "desc": "Baked classic with berry compote",
+   "ingredients": [
+    "Cream Cheese",
+    "Biscuit Base",
+    "Berry Compote"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Kulfi Falooda",
+   "diet": "veg",
+   "price": 200,
+   "desc": "Malai kulfi with falooda and rose",
+   "ingredients": [
+    "Kulfi",
+    "Vermicelli",
+    "Rose",
+    "Nuts"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Matka Kulfi",
+   "diet": "veg",
+   "price": 150,
+   "desc": "Traditional earthen-pot kulfi",
+   "ingredients": [
+    "Milk",
+    "Cardamom",
+    "Pistachio"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Fruit Custard",
+   "diet": "veg",
+   "price": 160,
+   "desc": "Chilled custard with seasonal fruit",
+   "ingredients": [
+    "Custard",
+    "Seasonal Fruit"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1567188040759-fb8a883dc6d8?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Waffle with Ice Cream",
+   "diet": "veg",
+   "price": 240,
+   "desc": "Belgian waffle, ice cream, maple",
+   "ingredients": [
+    "Waffle",
+    "Ice Cream",
+    "Maple Syrup"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1603894584373-5ac82b2ae398?w=400&h=300&fit=crop",
+   "status": "active"
+  },
+  {
+   "section": "desserts",
+   "name": "Jalebi with Rabri",
+   "diet": "veg",
+   "price": 190,
+   "desc": "Hot crisp jalebi over chilled rabri",
+   "ingredients": [
+    "Jalebi",
+    "Rabri",
+    "Saffron"
+   ],
+   "spicy": false,
+   "popular": false,
+   "img": "https://images.unsplash.com/photo-1631452180519-c014fe946bc7?w=400&h=300&fit=crop",
+   "status": "active"
+  }
+ ]
+}

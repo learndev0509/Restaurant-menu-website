@@ -6,7 +6,11 @@
   'use strict';
   document.documentElement.classList.remove('no-js');
 
-  document.addEventListener('DOMContentLoaded', function () {
+  /* Main init — invoked by menu-loader.js AFTER the menu is rendered from data.
+     (Falls back to DOMContentLoaded if the loader is absent, so the file still
+     works standalone with server-rendered markup.) */
+  window.__initMenu = function () {
+    if (window.__menuInited) return; window.__menuInited = true;
     const header       = document.querySelector('.site-header');
     const catNav       = document.querySelector('.cat-nav');
     const catTabs      = [...document.querySelectorAll('.cat-tab')];
@@ -296,6 +300,12 @@
     window.addEventListener('scroll', toggleTop, { passive: true });
     toggleTop();
     backToTop?.addEventListener('click', () => smoothScrollTo(0));
+  };
+
+  /* Standalone fallback: if no loader is present (static markup build),
+     initialize on DOMContentLoaded as before. */
+  document.addEventListener('DOMContentLoaded', function () {
+    if (!window.__menuLoaderPresent) window.__initMenu();
   });
 
   /* ---- Dark mode (persisted; degrades gracefully if storage blocked) ---- */
